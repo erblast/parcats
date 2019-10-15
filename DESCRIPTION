@@ -1,0 +1,29 @@
+Package: parcats
+Title: htmlwidget creating plotly parallel categories diagram from easyalluvial plots
+Version: 0.0.0.900
+Authors@R: person( "Bjoern", "Koneswarakantha", role = c("aut","cre"), email = "datistics@gmail.com", comment = c(ORCID = "0000-0003-4585-7799") )
+URL: https://github.com/erblast/parcats
+Description: `parcats` adds interactive graphing capabilities to the 'easyalluvial' package.
+  The 'plotly.js' parallel categories diagrams offer a good framework for
+  creating interactive flow graphs that allow manual drag'n drop sorting of dimensions
+  and categories, highlightling single flows and displaying mouse over information. The
+  'plotly.js' dependency is quite heavy and therefore is outsourced into a seperate package.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Depends: R(>= 2.10)
+Suggests: 
+    testthat,
+    covr,
+RoxygenNote: 6.1.1
+Imports:
+  easyalluvial (>= 0.2.1.0)
+  , tidyr (>= 1.0.0)
+  , dplyr
+  , purrr
+  , forcats
+  , magrittr
+  , tibble
+  , htmlwidgets
+Language: en-US
+
