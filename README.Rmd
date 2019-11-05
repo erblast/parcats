@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# easyalluvial <img src="https://github.com/erblast/parcats/blob/master/inst/logo/logo_parcats.png" alt="logo" width="180" height="180" align = "right"/> 
+# parcats <img src="https://github.com/erblast/parcats/blob/master/inst/logo/logo_parcats.png" alt="logo" width="180" height="180" align = "right"/> 
 
 <!-- badges: start -->
   [![Travis build status](https://travis-ci.org/erblast/parcats.svg?branch=master)](https://travis-ci.org/erblast/parcats)
