@@ -1,5 +1,4 @@
 
-library('easyalluvial')
 
 context('parcats')
 

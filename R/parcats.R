@@ -1,3 +1,15 @@
+# satisfy CMDcheck
+# https://stackoverflow.com/questions/9439256/how-can-i-handle-r-cmd-check-no-visible-binding-for-global-variable-notes-when
+
+
+if(getRversion() >= "2.15.1"){
+  utils::globalVariables( c('.', 'alluvial_id', 'color', 'color_line', 'color_marker', 'fill_flow', 'fill_value',
+                            'label', 'line_at', 'perc', 'plotted', 'rwn', 'shape_index', 'trace_index', 'trace_number',
+                            'type', 'value', 'value_str', 'var_key', 'variable', 'x', 'x_value') )
+}
+
+
+
 
 trace_hist_all = function(p, data_input){
   
@@ -84,7 +96,7 @@ trace_rug = function(p, data_input, var){
 trace_hist_mod = function(p, data_input, var){
   # creates densitiy histogram with line markers for model response
   
-  p_hist = plot_hist(var = var, p = p, data_input = data_input)
+  p_hist = easyalluvial::plot_hist(var = var, p = p, data_input = data_input)
   
   df = p_hist$data
   
@@ -156,7 +168,7 @@ trace_hist_mod = function(p, data_input, var){
 trace_hist_num = function(p, data_input, var){
   
   
-  p_hist = plot_hist(var = var, p = p, data_input = data_input)
+  p_hist = easyalluvial::plot_hist(var = var, p = p, data_input = data_input)
   
   df = p_hist$data
   
@@ -213,7 +225,7 @@ trace_hist_num = function(p, data_input, var){
 
 trace_hist_cat = function(p, data_input, var){
   
-  p_hist = plot_hist(var = var, p = p, data_input = data_input)
+  p_hist = easyalluvial::plot_hist(var = var, p = p, data_input = data_input)
   
   df_label = p$data %>%
     filter( x == var ) %>%
@@ -273,7 +285,7 @@ trace_hist_cat = function(p, data_input, var){
 
 trace_imp = function(p, data_input, truncate_at = 50, color = 'darkgrey'){
   
-  p_imp = plot_imp(p, data_input, truncate_at, color )
+  p_imp = easyalluvial::plot_imp(p, data_input, truncate_at, color )
   
   df = p_imp$data
   
@@ -564,6 +576,8 @@ get_shapes = function(traces){
 #'@details most parameters are best left at default values
 #' @examples
 #'
+#'library(easyalluvial)
+#'
 #' # alluvial wide ---------------------------------
 #' p = alluvial_wide(mtcars2, max_variables = 5)
 #'
@@ -592,6 +606,10 @@ get_shapes = function(traces){
 #'@import tidyr
 #'@import forcats
 #'@import purrr
+#'@import easyalluvial
+#'@importFrom graphics text
+#'@importFrom stats density
+#'@importFrom utils data  
 parcats <- function(p, marginal_histograms = T, data_input = NULL
                      , imp = T
                      , width = NULL, height = NULL, elementId = NULL
@@ -686,7 +704,7 @@ parcats <- function(p, marginal_histograms = T, data_input = NULL
     
     annotations = list()
     
-    p_imp = plot_imp(p, data_input)
+    p_imp = easyalluvial::plot_imp(p, data_input)
     
     max_perc = p_imp$data$perc %>% max()
     
@@ -727,7 +745,7 @@ parcats <- function(p, marginal_histograms = T, data_input = NULL
     x,
     width = width,
     height = height,
-    package = 'easyalluvial',
+    package = 'parcats',
     elementId = elementId
   )
 }
@@ -755,7 +773,7 @@ parcatsOutput <- function(outputId, width = '100%', height = '100%', inline = F)
                                  , 'parcats'
                                  , width
                                  , height
-                                 , package = 'easyalluvial'
+                                 , package = 'parcats'
                                  , inline = inline
                                  , reportSize = T)
 }

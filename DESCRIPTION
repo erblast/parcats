@@ -8,13 +8,14 @@ Description: `parcats` adds interactive graphing capabilities to the 'easyalluvi
   creating interactive flow graphs that allow manual drag'n drop sorting of dimensions
   and categories, highlightling single flows and displaying mouse over information. The
   'plotly.js' dependency is quite heavy and therefore is outsourced into a seperate package.
-License: CC0
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R(>= 2.10)
 Suggests: 
     testthat,
     covr,
+    randomForest
 RoxygenNote: 6.1.1
 Imports:
   easyalluvial (>= 0.2.1.0)
@@ -25,5 +26,5 @@ Imports:
   , magrittr
   , tibble
   , htmlwidgets
+  , stringr
 Language: en-US
-

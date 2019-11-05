@@ -76,6 +76,8 @@ most parameters are best left at default values
 }
 \examples{
 
+library(easyalluvial)
+
 # alluvial wide ---------------------------------
 p = alluvial_wide(mtcars2, max_variables = 5)
 

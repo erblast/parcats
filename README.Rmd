@@ -1,5 +1,6 @@
 ---
 output: github_document
+always_allow_html: yes
 editor_options: 
   chunk_output_type: console
 ---
@@ -15,15 +16,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-# easyalluvial <img src="https://www.datisticsblog.com/easyalluvial_logo_square.png" alt="logo" width="180" height="180" align = "right"/> 
+# easyalluvial <img src="https://github.com/erblast/parcats/blob/master/inst/logo/logo_parcats.png" alt="logo" width="180" height="180" align = "right"/> 
 
-[![Travis CI Build Status](https://travis-ci.org/erblast/easyalluvial.svg?branch=master)](https://travis-ci.org/erblast/easyalluvial) 
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/erblast/easyalluvial?branch=master&svg=true)](https://ci.appveyor.com/project/erblast/easyalluvial) 
-<!--
-[![Coverage Status](https://img.shields.io/codecov/c/github/erblast/easyalluvial/master.svg)](https://codecov.io/github/erblast/easyalluvial?branch=master)
-[![CRAN last release](https://www.r-pkg.org/badges/last-release/easyalluvial)](https://CRAN.R-project.org/package=easyalluvial)
-[![CRAN total downloads](https://cranlogs.r-pkg.org/badges/grand-total/easyalluvial)](https://CRAN.R-project.org/package=easyalluvial)
--->
+<!-- badges: start -->
+  [![Travis build status](https://travis-ci.org/erblast/parcats.svg?branch=master)](https://travis-ci.org/erblast/parcats)
+  [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branch=master&svg=true)](https://ci.appveyor.com/project/erblast/parcats)
+  [![Codecov test coverage](https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg)](https://codecov.io/gh/erblast/parcats?branch=master)
+<!-- badges: end -->
 
 `parcats` adds interactive graphing capabilities to the 'easyalluvial' package.
   The 'plotly.js' parallel categories diagrams offer a good framework for

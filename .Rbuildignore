@@ -1,2 +1,12 @@
+^CRAN-RELEASE$
+^revdep$
+^dependencies$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.travis\.yml$
+^appveyor\.yml$
+^codecov\.yml$
+^README\.Rmd$
+^README-.*\.png$
+^cran-comments\.md$
+^LICENSE\.md$
