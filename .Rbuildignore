@@ -10,4 +10,6 @@
 ^README-.*\.png$
 ^cran-comments\.md$
 ^LICENSE\.md$
-^*.gif
+^demo1\.gif
+^demo2\.gif
+^index\.Rmd$

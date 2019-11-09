@@ -8,17 +8,19 @@
 #
 
 library(shiny)
-library(easyalluvial)
+library(parcats)
 
 # Define UI for application that draws a histogram
 shinyUI(fluidPage(
 
     # Application title
-    titlePanel("Parcats"),
+    titlePanel("parcats")
 
 
-        # Show a plot of the generated distribution
-        mainPanel(
-            easyalluvial::alluvial_as_plotlyOutput('parcats')
-        )
+    # Show a plot of the generated distribution
+    , mainPanel(
+        parcats::parcatsOutput('parcats')
+        
+        , plotly::plotlyOutput('plotly')
+    )
 ))

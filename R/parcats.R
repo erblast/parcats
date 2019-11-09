@@ -596,7 +596,11 @@ get_shapes = function(traces){
 #' parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 #'
 #'
-#'@seealso \code{\link[htmlwidgets]{createWidget}}
+#'@seealso \code{\link[easyalluvial]{alluvial_wide}}
+#', \code{\link[easyalluvial]{alluvial_long}}
+#', \code{\link[easyalluvial]{alluvial_model_response}}
+#', \code{\link[easyalluvial]{alluvial_model_response_caret}}
+#`
 #'@rdname parcats
 #'@export
 #'@importFrom htmlwidgets createWidget

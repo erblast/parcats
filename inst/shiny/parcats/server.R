@@ -9,19 +9,23 @@
 
 library(shiny)
 library(easyalluvial)
+library(parcats)
+library(tidyverse)
+library(plotly)
+
+
+
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
 
-    output$parcats <- easyalluvial::render_alluvial_as_plotly({
+    output$parcats <- parcats::render_parcats({
         
         p = alluvial_wide(mtcars2, max_variables = 5)
         
-        w = alluvial_as_plotly(p, marginal_histograms = F)
+        parcats(p, marginal_histograms = T, data_input = mtcars2 )
         
-        w
     })
     
-
 })

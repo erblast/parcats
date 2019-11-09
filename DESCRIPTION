@@ -15,7 +15,9 @@ Depends: R(>= 2.10)
 Suggests: 
     testthat,
     covr,
-    randomForest
+    randomForest,
+    knitr,
+    rmarkdown
 RoxygenNote: 6.1.1
 Imports:
   easyalluvial (>= 0.2.1.0)
