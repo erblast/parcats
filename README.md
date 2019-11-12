@@ -93,4 +93,4 @@ p = alluvial_model_response(pred, dspace, imp, degree = 3)
 parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 ```
 
-![](http://github.com/erblast/parcats/blob/master/demo2.gif)
+![](demo2.gif)
