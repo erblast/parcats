@@ -1,6 +1,6 @@
 ---
 output: github_document
-always_allow_html: yes
+always_allow_html: no
 editor_options: 
   chunk_output_type: console
 ---
@@ -78,7 +78,7 @@ parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 
 ```
 
-![](http://github.com/erblast/parcats/blob/master/demo1.gif')
+![](http://github.com/erblast/parcats/blob/master/demo1.gif)
 
 ### Parcats from model response alluvial
 
@@ -101,4 +101,4 @@ parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 
 ```
 
-![]('http://github.com/erblast/parcats/blob/master/demo2.gif')
+![](http://github.com/erblast/parcats/blob/master/demo2.gif)

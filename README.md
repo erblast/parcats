@@ -65,7 +65,7 @@ p = alluvial_wide(mtcars2, max_variables = 5)
 parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 ```
 
-![](http://github.com/erblast/parcats/blob/master/demo1.gif')
+![](http://github.com/erblast/parcats/blob/master/demo1.gif)
 
 ### Parcats from model response alluvial
 
@@ -93,4 +93,4 @@ p = alluvial_model_response(pred, dspace, imp, degree = 3)
 parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 ```
 
-![]('http://github.com/erblast/parcats/blob/master/demo2.gif')
+![](http://github.com/erblast/parcats/blob/master/demo2.gif)
