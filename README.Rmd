@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# parcats <img src="https://github.com/erblast/parcats/blob/master/inst/logo/logo_parcats.png" alt="logo" width="180" height="180" align = "right"/> 
+# parcats <img src="https://erblast.github.io/parcats/logo_parcats.png" alt="logo" width="180" height="180" align = "right"/> 
 
 <!-- badges: start -->
   [![Travis build status](https://travis-ci.org/erblast/parcats.svg?branch=master)](https://travis-ci.org/erblast/parcats)
@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
   The 'plotly.js' parallel categories diagrams offer a good framework for
   creating interactive flow graphs that allow manual drag'n drop sorting of dimensions
   and categories, highlightling single flows and displaying mouse over information. The
-  'plotly.js' dependency is quite heavy and therefore is outsourced into a seperate package.
+  'plotly.js' dependency is quite heavy and therefore is outsourced into a separate package.
   
 
 ## Installation
@@ -78,7 +78,7 @@ parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 
 ```
 
-![](demo1.gif)
+![](https://erblast.github.io/parcats/demo1.gif)
 
 ### Parcats from model response alluvial
 
@@ -101,4 +101,4 @@ parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 
 ```
 
-![](demo2.gif)
+![](https://erblast.github.io/parcats/demo2.gif)

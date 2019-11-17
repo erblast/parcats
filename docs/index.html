@@ -6,6 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>htmlwidget creating plotly parallel categories diagram from easyalluvial plots • parcats</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
@@ -16,11 +22,18 @@
   creating interactive flow graphs that allow manual dragn drop sorting of dimensions
   and categories, highlightling single flows and displaying mouse over information. The
   plotly.js' dependency is quite heavy and therefore is outsourced into a seperate package.">
+<meta property="og:image" content="https://erblast.github.io/parcats/logo.png">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-123997499-2"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123997499-2');
+</script>
 </head>
 <body>
     <div class="container template-home">
@@ -50,15 +63,20 @@
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
-      </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/erblast/parcats">
-    <span class="fab fa fab fa-github fa-lg"></span>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
      
+    <span class="caret"></span>
   </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/live_widget.html">Live Widget</a>
+    </li>
+  </ul>
 </li>
       </ul>
+<ul class="nav navbar-nav navbar-right"></ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -72,7 +90,7 @@
   <div class="contents col-md-9">
 <div id="parcats-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#parcats-" class="anchor"></a>parcats <img src="https://github.com/erblast/parcats/blob/master/inst/logo/logo_parcats.png" alt="logo" width="180" height="180" align="right">
+<a href="#parcats-" class="anchor"></a>parcats <img src="https://erblast.github.io/parcats/logo_parcats.png" alt="logo" width="180" height="180" align="right">
 </h1></div>
 <!-- badges: start -->
 
@@ -96,6 +114,15 @@ install.packages('easyalluvial')
 <a class="sourceLine" id="cb1-3" title="3">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/reexports.html">install_github</a></span>(<span class="st">"erblast/parcats"</span>)</a></code></pre></div>
 </div>
 </div>
+<div id="easyalluvial" class="section level2">
+<h2 class="hasAnchor">
+<a href="#easyalluvial" class="anchor"></a>easyalluvial</h2>
+<p><code>parcats</code> requires an alluvial plot created with <code>easyalluvial</code> to create an interactive parrallel categories diagram.</p>
+<ul>
+<li><p><a href="https://www.datisticsblog.com/2018/10/intro_easyalluvial/#features">Data exploration with alluvial plots</a></p></li>
+<li><p><a href="https://github.com/erblast/easyalluvial">easyalluvial github page</a></p></li>
+</ul>
+</div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
@@ -108,11 +135,16 @@ install.packages('easyalluvial')
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">p =<span class="st"> </span><span class="kw">alluvial_wide</span>(mtcars2, <span class="dt">max_variables =</span> <span class="dv">5</span>)</a>
 <a class="sourceLine" id="cb3-2" title="2"></a>
 <a class="sourceLine" id="cb3-3" title="3"><span class="kw"><a href="reference/parcats.html">parcats</a></span>(p, <span class="dt">marginal_histograms =</span> <span class="ot">TRUE</span>, <span class="dt">data_input =</span> mtcars2)</a></code></pre></div>
-<p><embed src="http://github.com/erblast/parcats/blob/master/demo1.gif'"></embed></p>
+<p><img src="https://erblast.github.io/parcats/demo1.gif"></p>
 </div>
 <div id="parcats-from-model-response-alluvial" class="section level3">
 <h3 class="hasAnchor">
 <a href="#parcats-from-model-response-alluvial" class="anchor"></a>Parcats from model response alluvial</h3>
+<p>Machine Learning models operate in a multidimensional space and their response is hard to visualise. Model response and partial dependency plots attempt to visualise ML models in a two dimensional space. Using alluvial plots or parrallel categories diagrams we can increase the number of dimensions.</p>
+<ul>
+<li><a href="https://www.datisticsblog.com/page/visualising-model-response-with-easyalluvial/">Visualise model response with alluvial plots</a></li>
+</ul>
+<p>Here we see the response of a random forest model if we vary the three variables with the highest importance while keeping all other features at their median/mode value.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">df =<span class="st"> </span><span class="kw">select</span>(mtcars2, <span class="op">-</span>ids )</a>
 <a class="sourceLine" id="cb4-2" title="2">m =<span class="st"> </span>randomForest<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/randomForest/man/randomForest.html">randomForest</a></span>( disp <span class="op">~</span><span class="st"> </span>., df)</a>
 <a class="sourceLine" id="cb4-3" title="3">imp =<span class="st"> </span>m<span class="op">$</span>importance</a>
@@ -121,21 +153,14 @@ install.packages('easyalluvial')
 <a class="sourceLine" id="cb4-6" title="6">p =<span class="st"> </span><span class="kw">alluvial_model_response</span>(pred, dspace, imp, <span class="dt">degree =</span> <span class="dv">3</span>)</a>
 <a class="sourceLine" id="cb4-7" title="7"></a>
 <a class="sourceLine" id="cb4-8" title="8"><span class="kw"><a href="reference/parcats.html">parcats</a></span>(p, <span class="dt">marginal_histograms =</span> <span class="ot">TRUE</span>, <span class="dt">imp =</span> <span class="ot">TRUE</span>, <span class="dt">data_input =</span> df)</a></code></pre></div>
-<p><embed src="'http://github.com/erblast/parcats/blob/master/demo2.gif'"></embed></p>
+<p><img src="https://erblast.github.io/parcats/demo2.gif"></p>
 </div>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div class="links">
-<h2>Links</h2>
-<ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/erblast/parcats">https://​github.com/​erblast/​parcats</a>
-</li>
-</ul>
-</div>
-<div class="license">
+    <div class="license">
 <h2>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>

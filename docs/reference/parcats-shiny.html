@@ -8,6 +8,13 @@
 
 <title>Shiny bindings for parcats — parcats-shiny • parcats</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -38,6 +45,7 @@
 <meta property="og:title" content="Shiny bindings for parcats — parcats-shiny" />
 <meta property="og:description" content="Output and render functions for using parcats within Shiny
 applications and interactive Rmd documents." />
+<meta property="og:image" content="https://erblast.github.io/parcats/logo.png" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -52,6 +60,16 @@ applications and interactive Rmd documents." />
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123997499-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123997499-2');
+</script>
 
 
   </head>
@@ -85,14 +103,21 @@ applications and interactive Rmd documents." />
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/live_widget.html">Live Widget</a>
+    </li>
+  </ul>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/erblast/parcats">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -107,7 +132,7 @@ applications and interactive Rmd documents." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Shiny bindings for parcats</h1>
-    <small class="dont-index">Source: <a href='https://github.com/erblast/parcats/blob/master/R/parcats.R'><code>R/parcats.R</code></a></small>
+    
     <div class="hidden name"><code>parcats-shiny.Rd</code></div>
     </div>
 

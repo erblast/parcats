@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# parcats <img src="https://github.com/erblast/parcats/blob/master/inst/logo/logo_parcats.png" alt="logo" width="180" height="180" align = "right"/>
+# parcats <img src="https://erblast.github.io/parcats/logo_parcats.png" alt="logo" width="180" height="180" align = "right"/>
 
 <!-- badges: start -->
 
@@ -18,7 +18,7 @@ package. The ‘plotly.js’ parallel categories diagrams offer a good
 framework for creating interactive flow graphs that allow manual drag’n
 drop sorting of dimensions and categories, highlightling single flows
 and displaying mouse over information. The ‘plotly.js’ dependency is
-quite heavy and therefore is outsourced into a seperate package.
+quite heavy and therefore is outsourced into a separate package.
 
 ## Installation
 
@@ -65,7 +65,7 @@ p = alluvial_wide(mtcars2, max_variables = 5)
 parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 ```
 
-![](demo1.gif)
+![](https://erblast.github.io/parcats/demo1.gif)
 
 ### Parcats from model response alluvial
 
@@ -93,4 +93,4 @@ p = alluvial_model_response(pred, dspace, imp, degree = 3)
 parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 ```
 
-![](demo2.gif)
+![](https://erblast.github.io/parcats/demo2.gif)

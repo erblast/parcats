@@ -1,17 +1,11 @@
 ---
-title: "Get Started"
 output: html_document
+title: Live Widget
+always_allow_html: no
+editor_options: 
+  chunk_output_type: console
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-```{r }
-suppressPackageStartupMessages( require(tidyverse) )
-suppressPackageStartupMessages( require(easyalluvial) )
-suppressPackageStartupMessages( require(parcats) )
-```
 
 ## easyalluvial
 
@@ -21,9 +15,20 @@ suppressPackageStartupMessages( require(parcats) )
 
 - [easyalluvial github page](https://github.com/erblast/easyalluvial)
 
-## parcats from alluvial from data in wide format
 
-```{r eval = T}
+## Examples
+
+```{r}
+suppressPackageStartupMessages( require(tidyverse) )
+suppressPackageStartupMessages( require(easyalluvial) )
+suppressPackageStartupMessages( require(parcats) )
+
+```
+
+
+### Parcats from alluvial from data in wide format
+
+```{r eval = T, fig.width = 10, fig.height = 7}
 p = alluvial_wide(mtcars2, max_variables = 5)
 
 parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
@@ -31,8 +36,7 @@ parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 ```
 
 
-## parcats from model response alluvial
-
+### Parcats from model response alluvial
 
 Machine Learning models operate in a multidimensional space and their response is hard to visualise. Model response and partial dependency plots attempt to visualise ML models in a two dimensional space. Using alluvial plots or parrallel categories diagrams we can increase the number of dimensions.
 
@@ -40,7 +44,8 @@ Machine Learning models operate in a multidimensional space and their response i
 
 Here we see the response of a random forest model if we vary the three variables with the highest importance while keeping all other features at their median/mode value.
 
-```{r eval = T}
+
+```{r eval = T,  fig.width = 10, fig.height = 7}
 df = select(mtcars2, -ids )
 m = randomForest::randomForest( disp ~ ., df)
 imp = m$importance

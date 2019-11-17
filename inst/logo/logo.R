@@ -49,7 +49,7 @@ sticker(p, package="parcats", p_size=12, s_x=1, s_y=.9,
         , h_fill = 'ivory'
         , h_fill = 'ivory'
         , h_color = 'darkgrey'
-        , filename = './inst/logo/logo_parcats.png'
+        , filename = './inst/logo/logo.png'
         )
 
 

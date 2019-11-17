@@ -10,6 +10,6 @@
 ^README-.*\.png$
 ^cran-comments\.md$
 ^LICENSE\.md$
-^demo1\.gif
-^demo2\.gif
-^index\.Rmd$
+^_pkgdown\.yml$
+^vignettes$
+^docs$

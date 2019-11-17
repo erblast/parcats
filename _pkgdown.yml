@@ -1,0 +1,33 @@
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - tutorials
+    - news
+    right: github
+  components:
+    home:
+      icon: fas fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Live Widget
+        href: articles/live_widget.html
+template:
+  params:
+    ganalytics: UA-123997499-2
+url: https://erblast.github.io/parcats/
+reference:
+- title: All functions
+  desc: ~
+  contents:
+  - '`parcats`'
+  - '`parcats-shiny`'
+
