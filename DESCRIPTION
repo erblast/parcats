@@ -3,7 +3,7 @@ Title: htmlwidget creating plotly parallel categories diagram from easyalluvial 
 Version: 0.0.0.900
 Authors@R: person( "Bjoern", "Koneswarakantha", role = c("aut","cre"), email = "datistics@gmail.com", comment = c(ORCID = "0000-0003-4585-7799") )
 URL: https://erblast.github.io/parcats/
-Description: `parcats` adds interactive graphing capabilities to the 'easyalluvial' package.
+Description: The package `parcats` adds interactive graphing capabilities to the 'easyalluvial' package.
   The 'plotly.js' parallel categories diagrams offer a good framework for
   creating interactive flow graphs that allow manual drag'n drop sorting of dimensions
   and categories, highlightling single flows and displaying mouse over information. The

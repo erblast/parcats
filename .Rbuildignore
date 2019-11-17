@@ -13,3 +13,4 @@
 ^_pkgdown\.yml$
 ^vignettes$
 ^docs$
+^docker\.sh$
