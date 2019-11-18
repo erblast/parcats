@@ -5,7 +5,6 @@
 * ubuntu 14.04 (on travis-ci), R 3.6.1
 * x86_64-w64-mingw32/x64 (on appveyor), R 3.6.1
 * Ubuntu Linux 16.04 LTS, R-release, GCC (R-Hub)
-  - ERROR `covr` not available
 * Fedora Linux, R-devel, clang, gfo (R-Hub)
   - PREPERROR `ModelMetrics` (`caret` dependency) not available
 * Windows Server 2008 R2 SP1, R-devel, 32/64 bit (R-Hub)
