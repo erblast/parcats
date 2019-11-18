@@ -57,6 +57,12 @@ suppressPackageStartupMessages( require(easyalluvial) )
 suppressPackageStartupMessages( require(parcats) )
 ```
 
+### Live Widget
+
+The Htmlwidgets cannot be embedded in the `README.md` file. Check out
+the [Live Widget
+here](https://erblast.github.io/parcats/articles/parcats.html).
+
 ### Parcats from alluvial from data in wide format
 
 ``` r
