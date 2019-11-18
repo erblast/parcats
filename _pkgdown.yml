@@ -15,11 +15,12 @@ navbar:
     reference:
       text: Reference
       href: reference/index.html
-    articles:
-      text: Articles
-      menu:
-      - text: Live Widget
-        href: articles/live_widget.html
+    intro:
+      text: Live Widget
+      href: articles/parcats.html
+    news:
+      text: Changelog
+      href: news/index.html
 template:
   params:
     ganalytics: UA-123997499-2
