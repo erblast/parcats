@@ -1,3 +1,7 @@
+## Re-Submission
+* Changed Title in DESCRIPTION to title case
+* all package names in DESCRIPTION are now single quoted
+
 ## Test environments
 * local Win64, R 3.6.1 (including visual check of htmlwidget)
 * local OS64, R 3.6.1 (including visual check of htmlwidget)
