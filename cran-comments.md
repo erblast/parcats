@@ -1,6 +1,11 @@
+## Re-Re Submission 
+Fixed Spelling
+* highlightling   --> highlighting
+* drag'n drop --> drag and drop
+
 ## Re-Submission
 * Changed Title in DESCRIPTION to title case
-* all package names in DESCRIPTION are now single quoted
+* All package names in DESCRIPTION are now single quoted
 
 ## Test environments
 * local Win64, R 3.6.1 (including visual check of htmlwidget)

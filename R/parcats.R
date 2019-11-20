@@ -534,8 +534,8 @@ get_shapes = function(traces){
 }
 
 #'@title create plotly parallel categories diagram from alluvial plot
-#'@description creates an interacit parallel categories diagram from an alluvial
-#'  plot using the plotly.js library
+#'@description creates an interactive parallel categories diagram from an 'easyalluvial'
+#'  plot using the 'plotly.js' library
 #'@param p alluvial plot
 #'@param marginal_histograms logical, add marginal histograms, Default: T
 #'@param data_input dataframe, data used to create alluvial plot, Default: NULL
@@ -551,7 +551,7 @@ get_shapes = function(traces){
 #'  place per color per category.', 'If `dimension`, hover interactions take
 #'  place across all categories per dimension., Default: 'color'
 #'@param hoverinfo character, one of c('count', 'probability',
-#'  'count+probability') set infor displayed on mouse hover Default:
+#'  'count+probability') set info displayed on mouse hover Default:
 #'  'count+probability'
 #'@param arrangement, character, one of c('perpendicular', 'freeform', 'fixed')
 #'  'Sets the drag interaction mode for categories and dimensions.', 'If

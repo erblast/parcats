@@ -6,8 +6,8 @@ URL: https://erblast.github.io/parcats/
 Description: Complex graphical representations of data are best explored using interactive elements.
   'parcats' adds interactive graphing capabilities to the 'easyalluvial' package.
   The 'plotly.js' parallel categories diagrams offer a good framework for
-  creating interactive flow graphs that allow manual drag'n drop sorting of dimensions
-  and categories, highlightling single flows and displaying mouse over information. The
+  creating interactive flow graphs that allow manual drag and drop sorting of dimensions
+  and categories, highlighting single flows and displaying mouse over information. The
   'plotly.js' dependency is quite heavy and therefore is outsourced into a separate package.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -18,8 +18,9 @@ Suggests:
     covr,
     randomForest,
     knitr,
-    rmarkdown
-RoxygenNote: 6.1.1
+    rmarkdown,
+    spelling
+RoxygenNote: 7.0.0
 Imports:
   easyalluvial (>= 0.2.1.0)
   , tidyr (>= 1.0.0)

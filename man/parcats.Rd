@@ -4,12 +4,24 @@
 \alias{parcats}
 \title{create plotly parallel categories diagram from alluvial plot}
 \usage{
-parcats(p, marginal_histograms = T, data_input = NULL, imp = T,
-  width = NULL, height = NULL, elementId = NULL, hoveron = "color",
-  hoverinfo = "count+probability", arrangement = "perpendicular",
-  bundlecolors = TRUE, sortpaths = "forward", labelfont = list(size =
-  24, color = "black"), tickfont = NULL,
-  offset_marginal_histograms = 0.8, offset_imp = 0.9)
+parcats(
+  p,
+  marginal_histograms = T,
+  data_input = NULL,
+  imp = T,
+  width = NULL,
+  height = NULL,
+  elementId = NULL,
+  hoveron = "color",
+  hoverinfo = "count+probability",
+  arrangement = "perpendicular",
+  bundlecolors = TRUE,
+  sortpaths = "forward",
+  labelfont = list(size = 24, color = "black"),
+  tickfont = NULL,
+  offset_marginal_histograms = 0.8,
+  offset_imp = 0.9
+)
 }
 \arguments{
 \item{p}{alluvial plot}
@@ -35,7 +47,7 @@ place per color per category.', 'If `dimension`, hover interactions take
 place across all categories per dimension., Default: 'color'}
 
 \item{hoverinfo}{character, one of c('count', 'probability',
-'count+probability') set infor displayed on mouse hover Default:
+'count+probability') set info displayed on mouse hover Default:
 'count+probability'}
 
 \item{arrangement, }{character, one of c('perpendicular', 'freeform', 'fixed')
@@ -68,8 +80,8 @@ diagram, Default: 0.8}
 htmlwidget
 }
 \description{
-creates an interacit parallel categories diagram from an alluvial
- plot using the plotly.js library
+creates an interactive parallel categories diagram from an 'easyalluvial'
+ plot using the 'plotly.js' library
 }
 \details{
 most parameters are best left at default values
