@@ -43,8 +43,8 @@
 
 
 <meta property="og:title" content="create plotly parallel categories diagram from alluvial plot — parcats" />
-<meta property="og:description" content="creates an interacit parallel categories diagram from an alluvial
- plot using the plotly.js library" />
+<meta property="og:description" content="creates an interactive parallel categories diagram from an 'easyalluvial'
+ plot using the 'plotly.js' library" />
 <meta property="og:image" content="https://erblast.github.io/parcats/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -131,16 +131,28 @@
     </div>
 
     <div class="ref-description">
-    <p>creates an interacit parallel categories diagram from an alluvial
- plot using the plotly.js library</p>
+    <p>creates an interactive parallel categories diagram from an 'easyalluvial'
+ plot using the 'plotly.js' library</p>
     </div>
 
-    <pre class="usage"><span class='fu'>parcats</span>(<span class='no'>p</span>, <span class='kw'>marginal_histograms</span> <span class='kw'>=</span> <span class='no'>T</span>, <span class='kw'>data_input</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>imp</span> <span class='kw'>=</span> <span class='no'>T</span>,
-  <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>height</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>elementId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>hoveron</span> <span class='kw'>=</span> <span class='st'>"color"</span>,
-  <span class='kw'>hoverinfo</span> <span class='kw'>=</span> <span class='st'>"count+probability"</span>, <span class='kw'>arrangement</span> <span class='kw'>=</span> <span class='st'>"perpendicular"</span>,
-  <span class='kw'>bundlecolors</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>sortpaths</span> <span class='kw'>=</span> <span class='st'>"forward"</span>, <span class='kw'>labelfont</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>size</span> <span class='kw'>=</span>
-  <span class='fl'>24</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>), <span class='kw'>tickfont</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>offset_marginal_histograms</span> <span class='kw'>=</span> <span class='fl'>0.8</span>, <span class='kw'>offset_imp</span> <span class='kw'>=</span> <span class='fl'>0.9</span>)</pre>
+    <pre class="usage"><span class='fu'>parcats</span>(
+  <span class='no'>p</span>,
+  <span class='kw'>marginal_histograms</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>data_input</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>imp</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>width</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>height</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>elementId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>hoveron</span> <span class='kw'>=</span> <span class='st'>"color"</span>,
+  <span class='kw'>hoverinfo</span> <span class='kw'>=</span> <span class='st'>"count+probability"</span>,
+  <span class='kw'>arrangement</span> <span class='kw'>=</span> <span class='st'>"perpendicular"</span>,
+  <span class='kw'>bundlecolors</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>sortpaths</span> <span class='kw'>=</span> <span class='st'>"forward"</span>,
+  <span class='kw'>labelfont</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>24</span>, <span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"black"</span>),
+  <span class='kw'>tickfont</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>offset_marginal_histograms</span> <span class='kw'>=</span> <span class='fl'>0.8</span>,
+  <span class='kw'>offset_imp</span> <span class='kw'>=</span> <span class='fl'>0.9</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -151,7 +163,7 @@
     </tr>
     <tr>
       <th>marginal_histograms</th>
-      <td><p>logical, add marginal histograms, Default: T</p></td>
+      <td><p>logical, add marginal histograms, Default: TRUE</p></td>
     </tr>
     <tr>
       <th>data_input</th>
@@ -186,7 +198,7 @@ place across all categories per dimension., Default: 'color'</p></td>
     <tr>
       <th>hoverinfo</th>
       <td><p>character, one of c('count', 'probability',
-'count+probability') set infor displayed on mouse hover Default:
+'count+probability') set info displayed on mouse hover Default:
 'count+probability'</p></td>
     </tr>
     <tr>

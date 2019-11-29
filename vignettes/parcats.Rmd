@@ -28,7 +28,7 @@ suppressPackageStartupMessages( require(parcats) )
 
 ### Parcats from alluvial from data in wide format
 
-```{r eval = T, fig.width = 10, fig.height = 7}
+```{r eval = TRUE, fig.width = 10, fig.height = 7}
 p = alluvial_wide(mtcars2, max_variables = 5)
 
 parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
@@ -45,7 +45,7 @@ Machine Learning models operate in a multidimensional space and their response i
 Here we see the response of a random forest model if we vary the three variables with the highest importance while keeping all other features at their median/mode value.
 
 
-```{r eval = T,  fig.width = 10, fig.height = 7}
+```{r eval = TRUE,  fig.width = 10, fig.height = 7}
 df = select(mtcars2, -ids )
 m = randomForest::randomForest( disp ~ ., df)
 imp = m$importance

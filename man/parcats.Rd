@@ -6,9 +6,9 @@
 \usage{
 parcats(
   p,
-  marginal_histograms = T,
+  marginal_histograms = TRUE,
   data_input = NULL,
-  imp = T,
+  imp = TRUE,
   width = NULL,
   height = NULL,
   elementId = NULL,
@@ -26,7 +26,7 @@ parcats(
 \arguments{
 \item{p}{alluvial plot}
 
-\item{marginal_histograms}{logical, add marginal histograms, Default: T}
+\item{marginal_histograms}{logical, add marginal histograms, Default: TRUE}
 
 \item{data_input}{dataframe, data used to create alluvial plot, Default: NULL}
 

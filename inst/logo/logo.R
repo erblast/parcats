@@ -31,7 +31,7 @@ col =  viridisLite::magma(12)
 p = alluvial_long(monthly_flights, key = qu, value =  mean_arr_delay, fill = carrier, id = flight_id
      , col_vector_flow = col
      , col_vector_value = c('grey', 'darkgrey')
-     , stratum_labels = F
+     , stratum_labels = FALSE
      , stratum_width = 0 ) +
   labs( caption = '') +
   theme_minimal() +

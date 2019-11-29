@@ -6,7 +6,7 @@
 \alias{render_parcats}
 \title{Shiny bindings for parcats}
 \usage{
-parcatsOutput(outputId, width = "100\%", height = "100\%", inline = F)
+parcatsOutput(outputId, width = "100\%", height = "100\%", inline = FALSE)
 
 render_parcats(expr, env = parent.frame(), quoted = FALSE)
 }

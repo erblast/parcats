@@ -24,7 +24,7 @@ shinyServer(function(input, output) {
         
         p = alluvial_wide(mtcars2, max_variables = 5)
         
-        parcats(p, marginal_histograms = T, data_input = mtcars2 )
+        parcats(p, marginal_histograms = TRUE, data_input = mtcars2 )
         
     })
     

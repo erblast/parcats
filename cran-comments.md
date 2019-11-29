@@ -1,3 +1,7 @@
+## Re-Re-Re Submission
+* Shortened title to less than 65 characters
+* replaced all occurrences of F/T with FALSE/TRUE
+
 ## Re-Re Submission 
 Fixed Spelling
 * highlightling   --> highlighting

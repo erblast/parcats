@@ -151,7 +151,7 @@ trace_hist_mod = function(p, data_input, var){
                                        , y1 = max(y_var)
                                        , type = 'line'
                                        , line = list( color = 'lightgrey')
-                                       , showlegend = F
+                                       , showlegend = FALSE
                                        , name = paste0( var,'_' ,l )
                                        , xref = paste0( 'x', which(vars == var) )
                                        , yref = paste0( 'y', which(vars == var) ) ) )
@@ -300,7 +300,7 @@ trace_imp = function(p, data_input, truncate_at = 50, color = 'darkgrey'){
             , method = p$alluvial_params$method 
             , text = case_when( plotted == 'y' ~ 'alluvial'
                                 , method == 'pdp' ~ 'pdp'
-                                , T ~ paste('fixed:', const_values) ) ) %>%
+                                , TRUE ~ paste('fixed:', const_values) ) ) %>%
     group_by(vars, perc) %>%
     mutate( trace = list( list( y = list(vars)
                           , x = list(perc)
@@ -442,9 +442,9 @@ create_layout_hist = function(trace_hist
     layout_x = list( domain = coord_x[(i*2-1):(i*2)]
                      #, anchor = yaxis[i]
                      , anchor = paste0('y1', i)
-                     , showgrid = F
-                     , showline = F
-                     , zeroline = F )
+                     , showgrid = FALSE
+                     , showline = FALSE
+                     , zeroline = FALSE )
     
     layout_x = list(layout_x)
     
@@ -458,10 +458,10 @@ create_layout_hist = function(trace_hist
     layout_y = list( domain = c(lim_up, 1)
                      #, anchor = xaxis[i]
                      #, anchor = paste0('xaxis1', i)
-                     , showgrid = F
-                     , showline = F
-                     , showticklabels = F
-                     , zeroline = F )
+                     , showgrid = FALSE
+                     , showline = FALSE
+                     , showticklabels = FALSE
+                     , zeroline = FALSE )
 
     layout_y = list(layout_y)
     
@@ -537,7 +537,7 @@ get_shapes = function(traces){
 #'@description creates an interactive parallel categories diagram from an 'easyalluvial'
 #'  plot using the 'plotly.js' library
 #'@param p alluvial plot
-#'@param marginal_histograms logical, add marginal histograms, Default: T
+#'@param marginal_histograms logical, add marginal histograms, Default: TRUE
 #'@param data_input dataframe, data used to create alluvial plot, Default: NULL
 #'@param imp dataframe, with not more then two columns one of them numeric
 #'  containing importance measures and one character or factor column containing
@@ -614,8 +614,8 @@ get_shapes = function(traces){
 #'@importFrom graphics text
 #'@importFrom stats density
 #'@importFrom utils data  
-parcats <- function(p, marginal_histograms = T, data_input = NULL
-                     , imp = T
+parcats <- function(p, marginal_histograms = TRUE, data_input = NULL
+                     , imp = TRUE
                      , width = NULL, height = NULL, elementId = NULL
                      , hoveron = 'color'
                      , hoverinfo = 'count+probability'
@@ -633,10 +633,10 @@ parcats <- function(p, marginal_histograms = T, data_input = NULL
     stop('data_input required if marginal_histograms == TRUE')
   }
   
-  if( imp == T & is.null(data_input) & p$alluvial_type == 'model_response' ){
+  if( imp == TRUE & is.null(data_input) & p$alluvial_type == 'model_response' ){
     stop('data_input required if imp == TRUE')
   }else if(p$alluvial_type != 'model_response' | ! imp ){
-    imp = F
+    imp = FALSE
     offset_imp = 1
   }
   
@@ -695,11 +695,11 @@ parcats <- function(p, marginal_histograms = T, data_input = NULL
     traces = append(traces, traces_imp)
     layout_imp = list( yaxis99 = list( domain = c(0,1)
                                        , anchor = 'y99' 
-                                       , showticklabels = F
+                                       , showticklabels = FALSE
                                        )
                        , xaxis99 = list(domain = c(offset_imp,1)
                                         , anchor = 'x99' 
-                                        , showticklabels = F
+                                        , showticklabels = FALSE
                                         ) ) 
     layout = append(layout, layout_imp)
     
@@ -772,14 +772,14 @@ parcats <- function(p, marginal_histograms = T, data_input = NULL
 #' @name parcats-shiny
 #'
 #' @export
-parcatsOutput <- function(outputId, width = '100%', height = '100%', inline = F){
+parcatsOutput <- function(outputId, width = '100%', height = '100%', inline = FALSE){
   htmlwidgets::shinyWidgetOutput(outputId
                                  , 'parcats'
                                  , width
                                  , height
                                  , package = 'parcats'
                                  , inline = inline
-                                 , reportSize = T)
+                                 , reportSize = TRUE)
 }
 
 #' @rdname parcats-shiny

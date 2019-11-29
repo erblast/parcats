@@ -1,5 +1,5 @@
 Package: parcats
-Title: Create 'plotly.js' Parallel Categories Diagrams Using this Htmlwidget and 'easyalluvial'
+Title: Interactive Parallel Categories Diagrams for 'easyalluvial'
 Version: 0.0.1
 Authors@R: person( "Bjoern", "Koneswarakantha", role = c("aut","cre"), email = "datistics@gmail.com", comment = c(ORCID = "0000-0003-4585-7799") )
 URL: https://erblast.github.io/parcats/
