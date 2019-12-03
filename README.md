@@ -11,6 +11,11 @@ status](https://travis-ci.org/erblast/parcats.svg?branch=master)](https://travis
 status](https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branch=master&svg=true)](https://ci.appveyor.com/project/erblast/parcats)
 [![Codecov test
 coverage](https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg)](https://codecov.io/gh/erblast/parcats?branch=master)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/parcats)](https://CRAN.R-project.org/package=parcats)
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/parcats)](https://cran.r-project.org/package=parcats)
+[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/parcats)](https://cran.r-project.org/package=parcats)
 <!-- badges: end -->
 
 ###### Create ‘plotly.js’ Parallel Categories Diagrams Using this Htmlwidget and ‘easyalluvial’
@@ -26,14 +31,11 @@ a separate package.
 
 ## Installation
 
-<!--
 ### CRAN
 
-
-```r
-install.packages('easyalluvial')
+``` r
+install.packages('parcats')
 ```
--->
 
 ### Development Version
 
@@ -58,7 +60,11 @@ create an interactive parrallel categories diagram.
 ``` r
 suppressPackageStartupMessages( require(tidyverse) )
 suppressPackageStartupMessages( require(easyalluvial) )
+#> Error: package or namespace load failed for 'easyalluvial' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+#>  namespace 'tidyr' 0.8.3 is already loaded, but >= 1.0.0 is required
 suppressPackageStartupMessages( require(parcats) )
+#> Error: package or namespace load failed for 'parcats' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+#>  namespace 'tidyr' 0.8.3 is already loaded, but >= 1.0.0 is required
 ```
 
 ### Live Widget

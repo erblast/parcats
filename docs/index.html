@@ -49,7 +49,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">parcats</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1.9000</span>
       </span>
     </div>
 
@@ -96,20 +96,17 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<!--
-### CRAN
-
-
-```r
-install.packages('easyalluvial')
-```
--->
+<div id="cran" class="section level3">
+<h3 class="hasAnchor">
+<a href="#cran" class="anchor"></a>CRAN</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">'parcats'</span>)</a></code></pre></div>
+</div>
 <div id="development-version" class="section level3">
 <h3 class="hasAnchor">
 <a href="#development-version" class="anchor"></a>Development Version</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co"># install.packages("devtools")</span></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"erblast/parcats"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co"># install.packages("devtools")</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"erblast/parcats"</span>)</a></code></pre></div>
 </div>
 </div>
 <div id="easyalluvial" class="section level2">
@@ -124,9 +121,13 @@ install.packages('easyalluvial')
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(tidyverse) )</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(easyalluvial) )</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(parcats) )</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(tidyverse) )</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(easyalluvial) )</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt; Error: package or namespace load failed for 'easyalluvial' in loadNamespace(j &lt;- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;  namespace 'tidyr' 0.8.3 is already loaded, but &gt;= 1.0.0 is required</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="kw"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(parcats) )</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt; Error: package or namespace load failed for 'parcats' in loadNamespace(j &lt;- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt;  namespace 'tidyr' 0.8.3 is already loaded, but &gt;= 1.0.0 is required</span></a></code></pre></div>
 <div id="live-widget" class="section level3">
 <h3 class="hasAnchor">
 <a href="#live-widget" class="anchor"></a>Live Widget</h3>
@@ -135,9 +136,9 @@ install.packages('easyalluvial')
 <div id="parcats-from-alluvial-from-data-in-wide-format" class="section level3">
 <h3 class="hasAnchor">
 <a href="#parcats-from-alluvial-from-data-in-wide-format" class="anchor"></a>Parcats from alluvial from data in wide format</h3>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">p =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/easyalluvial/man/alluvial_wide.html">alluvial_wide</a></span>(mtcars2, <span class="dt">max_variables =</span> <span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw"><a href="reference/parcats.html">parcats</a></span>(p, <span class="dt">marginal_histograms =</span> <span class="ot">TRUE</span>, <span class="dt">data_input =</span> mtcars2)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">p =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/easyalluvial/man/alluvial_wide.html">alluvial_wide</a></span>(mtcars2, <span class="dt">max_variables =</span> <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw"><a href="https://erblast.github.io/parcats//reference/parcats.html">parcats</a></span>(p, <span class="dt">marginal_histograms =</span> <span class="ot">TRUE</span>, <span class="dt">data_input =</span> mtcars2)</a></code></pre></div>
 <p><img src="https://erblast.github.io/parcats/demo1.gif"></p>
 </div>
 <div id="parcats-from-model-response-alluvial" class="section level3">
@@ -148,14 +149,14 @@ install.packages('easyalluvial')
 <li><a href="https://www.datisticsblog.com/page/visualising-model-response-with-easyalluvial/">Visualise model response with alluvial plots</a></li>
 </ul>
 <p>Here we see the response of a random forest model if we vary the three variables with the highest importance while keeping all other features at their median/mode value.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">df =<span class="st"> </span><span class="kw">select</span>(mtcars2, <span class="op">-</span>ids )</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">m =<span class="st"> </span>randomForest<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/randomForest/man/randomForest.html">randomForest</a></span>( disp <span class="op">~</span><span class="st"> </span>., df)</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">imp =<span class="st"> </span>m<span class="op">$</span>importance</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4">dspace =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/easyalluvial/man/get_data_space.html">get_data_space</a></span>(df, imp, <span class="dt">degree =</span> <span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5">pred =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(m, <span class="dt">newdata =</span> dspace)</a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">p =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/easyalluvial/man/alluvial_model_response.html">alluvial_model_response</a></span>(pred, dspace, imp, <span class="dt">degree =</span> <span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="kw"><a href="reference/parcats.html">parcats</a></span>(p, <span class="dt">marginal_histograms =</span> <span class="ot">TRUE</span>, <span class="dt">imp =</span> <span class="ot">TRUE</span>, <span class="dt">data_input =</span> df)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">df =<span class="st"> </span><span class="kw">select</span>(mtcars2, <span class="op">-</span>ids )</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">m =<span class="st"> </span>randomForest<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/randomForest/man/randomForest.html">randomForest</a></span>( disp <span class="op">~</span><span class="st"> </span>., df)</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">imp =<span class="st"> </span>m<span class="op">$</span>importance</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">dspace =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/easyalluvial/man/get_data_space.html">get_data_space</a></span>(df, imp, <span class="dt">degree =</span> <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">pred =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(m, <span class="dt">newdata =</span> dspace)</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">p =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/pkg/easyalluvial/man/alluvial_model_response.html">alluvial_model_response</a></span>(pred, dspace, imp, <span class="dt">degree =</span> <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="kw"><a href="https://erblast.github.io/parcats//reference/parcats.html">parcats</a></span>(p, <span class="dt">marginal_histograms =</span> <span class="ot">TRUE</span>, <span class="dt">imp =</span> <span class="ot">TRUE</span>, <span class="dt">data_input =</span> df)</a></code></pre></div>
 <p><img src="https://erblast.github.io/parcats/demo2.gif"></p>
 </div>
 </div>
@@ -163,7 +164,14 @@ install.packages('easyalluvial')
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div class="license">
+    <div class="links">
+<h2>Links</h2>
+<ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=parcats">https://​cloud.r-project.org/​package=parcats</a>
+</li>
+</ul>
+</div>
+<div class="license">
 <h2>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
@@ -183,6 +191,9 @@ install.packages('easyalluvial')
 <li><a href="https://travis-ci.org/erblast/parcats"><img src="https://travis-ci.org/erblast/parcats.svg?branch=master" alt="Travis build status"></a></li>
 <li><a href="https://ci.appveyor.com/project/erblast/parcats"><img src="https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
 <li><a href="https://codecov.io/gh/erblast/parcats?branch=master"><img src="https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://CRAN.R-project.org/package=parcats"><img src="https://www.r-pkg.org/badges/version/parcats" alt="CRAN status"></a></li>
+<li><a href="https://cran.r-project.org/package=parcats"><img src="https://cranlogs.r-pkg.org/badges/grand-total/parcats" alt="metacran downloads"></a></li>
+<li><a href="https://cran.r-project.org/package=parcats"><img src="https://www.r-pkg.org/badges/ago/parcats" alt="CRAN_time_from_release"></a></li>
 </ul>
 </div>
 </div>

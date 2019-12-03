@@ -22,6 +22,10 @@ knitr::opts_chunk$set(
   [![Travis build status](https://travis-ci.org/erblast/parcats.svg?branch=master)](https://travis-ci.org/erblast/parcats)
   [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branch=master&svg=true)](https://ci.appveyor.com/project/erblast/parcats)
   [![Codecov test coverage](https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg)](https://codecov.io/gh/erblast/parcats?branch=master)
+[![CRAN status](https://www.r-pkg.org/badges/version/parcats)](https://CRAN.R-project.org/package=parcats)
+[![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/parcats)](https://cran.r-project.org/package=parcats)
+[![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/parcats)](https://cran.r-project.org/package=parcats)
+
 <!-- badges: end -->
 
 ###### Create 'plotly.js' Parallel Categories Diagrams Using this Htmlwidget and 'easyalluvial'  
@@ -35,13 +39,12 @@ Complex graphical representations of data are best explored using interactive el
 
 ## Installation
 
-<!--
+
 ### CRAN
 
 ```{r cran, eval = FALSE }
-install.packages('easyalluvial')
+install.packages('parcats')
 ```
--->
 
 ### Development Version
 
