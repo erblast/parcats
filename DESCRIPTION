@@ -1,6 +1,6 @@
 Package: parcats
 Title: Interactive Parallel Categories Diagrams for 'easyalluvial'
-Version: 0.0.1
+Version: 0.0.1.9000
 Authors@R: person( "Bjoern", "Koneswarakantha", role = c("aut","cre"), email = "datistics@gmail.com", comment = c(ORCID = "0000-0003-4585-7799") )
 URL: https://erblast.github.io/parcats/
 Description: Complex graphical representations of data are best explored using interactive elements.
