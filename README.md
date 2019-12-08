@@ -89,7 +89,7 @@ alluvial plots or parrallel categories diagrams we can increase the
 number of dimensions.
 
   - [Visualise model response with alluvial
-    plots](https://www.datisticsblog.com/page/visualising-model-response-with-easyalluvial/)
+    plots](https://www.datisticsblog.com/2019/04/visualising-model-response-with-easyalluvial/)
 
 Here we see the response of a random forest model if we vary the three
 variables with the highest importance while keeping all other features
