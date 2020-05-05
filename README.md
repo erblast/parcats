@@ -52,8 +52,8 @@ devtools::install_github("erblast/parcats")
 `parcats` requires an alluvial plot created with `easyalluvial` to
 create an interactive parrallel categories diagram.
 
-  - [Data exploration with alluvial
-    plots](https://www.datisticsblog.com/2018/10/intro_easyalluvial/#features)
+  - [easyalluvial
+    documentation](https://erblast.github.io/easyalluvial/)
 
   - [easyalluvial github page](https://github.com/erblast/easyalluvial)
 
