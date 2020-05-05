@@ -1,6 +1,26 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
-language: R
-cache: packages
-after_success:
-  - Rscript -e 'covr::codecov()'
+matrix:
+  include:
+  - r: devel
+    after_success:
+    - export PKGDOWN=no
+  - r: release
+    after_success:
+    - Rscript -e 'covr::codecov()'
+    - Rscript -e 'pkgdown::build_site(run_dont_run = TRUE)' && export PKGDOWN=yes
+  - r: release
+    name: easyalluvial-devel
+    before_script: Rscript -e "remotes::install_github('erblast/easyalluvial')"
+    after_success:
+    - export PKGDOWN=no
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  local-dir: docs
+  on:
+    branch: master
+    condition: $PKGDOWN = yes

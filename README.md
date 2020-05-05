@@ -16,7 +16,8 @@ status](https://www.r-pkg.org/badges/version/parcats)](https://CRAN.R-project.or
 [![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/parcats)](https://cran.r-project.org/package=parcats)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/parcats)](https://cran.r-project.org/package=parcats)
-
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/parcats)](https://cran.r-project.org/package=parcats)
 <!-- badges: end -->
 
 ###### Create ‘plotly.js’ Parallel Categories Diagrams Using this Htmlwidget and ‘easyalluvial’
