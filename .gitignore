@@ -6,3 +6,4 @@ dependencies/
 revdep/
 inst/doc
 docker.sh
+docs/

@@ -1,9 +1,0 @@
-pandoc: 2.3.1
-pkgdown: 1.4.1
-pkgdown_sha: ~
-articles:
-  parcats: parcats.html
-urls:
-  reference: https://erblast.github.io/parcats//reference
-  article: https://erblast.github.io/parcats//articles
-
