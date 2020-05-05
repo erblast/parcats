@@ -13,6 +13,7 @@ matrix:
     after_success:
     - export PKGDOWN=no
   - r: release
+    before_script: Rscript -e 'install.packages(c("pkgdown"))'
     after_success:
     - Rscript -e 'covr::codecov()'
     - Rscript -e 'pkgdown::build_site(run_dont_run = TRUE)' && export PKGDOWN=yes
