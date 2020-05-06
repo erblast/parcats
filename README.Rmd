@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# parcats <img src="https://erblast.github.io/parcats/logo_parcats.png" alt="logo" width="180" height="180" align = "right"/> 
+# parcats <a href='https://erblast.github.io/parcats'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
   [![Travis build status](https://travis-ci.org/erblast/parcats.svg?branch=master)](https://travis-ci.org/erblast/parcats)
@@ -85,7 +85,7 @@ parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 
 ```
 
-![](https://erblast.github.io/parcats/demo1.gif)
+![](demo1.gif)
 
 ### Parcats from model response alluvial
 
@@ -108,4 +108,4 @@ parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 
 ```
 
-![](https://erblast.github.io/parcats/demo2.gif)
+![](demo2.gif)

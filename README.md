@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# parcats <img src="https://erblast.github.io/parcats/logo_parcats.png" alt="logo" width="180" height="180" align = "right"/>
+# parcats <a href='https://erblast.github.io/parcats'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
 
@@ -79,7 +79,7 @@ p = alluvial_wide(mtcars2, max_variables = 5)
 parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 ```
 
-![](https://erblast.github.io/parcats/demo1.gif)
+![](demo1.gif)
 
 ### Parcats from model response alluvial
 
@@ -107,4 +107,4 @@ p = alluvial_model_response(pred, dspace, imp, degree = 3)
 parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 ```
 
-![](https://erblast.github.io/parcats/demo2.gif)
+![](demo2.gif)

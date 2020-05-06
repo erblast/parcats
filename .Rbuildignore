@@ -15,3 +15,5 @@
 ^docs$
 ^docker\.sh$
 ^pkgdown$
+^demo1\.png$
+^demo2\.png$
