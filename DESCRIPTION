@@ -20,7 +20,7 @@ Suggests:
     knitr,
     rmarkdown,
     spelling
-RoxygenNote: 7.0.0
+RoxygenNote: 7.1.0
 Imports:
   easyalluvial (>= 0.2.1.0)
   , tidyr (>= 1.0.0)
