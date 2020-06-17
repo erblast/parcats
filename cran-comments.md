@@ -13,5 +13,5 @@
 ## Comments
 - No reverse dependencies
 - Examples were not changed during update, exeution time does not throw notes on other testing systems
-- 'data.table' should be available to install
+- 'data.table' should be available to install, package unavailability seems system specific
 
