@@ -2,7 +2,7 @@ pandoc: '2.2'
 pkgdown: 1.5.1
 pkgdown_sha: ~
 articles: []
-last_built: 2020-07-14T22:54Z
+last_built: 2020-07-21T22:56Z
 urls:
   reference: https://erblast.github.io/parcats//reference
   article: https://erblast.github.io/parcats//articles
