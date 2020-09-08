@@ -99,14 +99,18 @@
 <div id="cran" class="section level3">
 <h3 class="hasAnchor">
 <a href="#cran" class="anchor"></a>CRAN</h3>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">'parcats'</span>)</pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">'parcats'</span>)
+</pre></div>
 </div>
 <div id="development-version" class="section level3">
 <h3 class="hasAnchor">
 <a href="#development-version" class="anchor"></a>Development Version</h3>
-<div class="sourceCode" id="cb2"><pre class="r">
+<div class="sourceCode" id="cb2"><pre class="downlit">
+
 <span class="co"># install.packages("devtools")</span>
-<span class="kw pkg">devtools</span><span class="kw ns">::</span><span class="fu">install_github</span>(<span class="st">"erblast/parcats"</span>)</pre></div>
+<span class="kw">devtools</span>::<span class="fu">install_github</span>(<span class="st">"erblast/parcats"</span>)
+</pre></div>
 </div>
 </div>
 <div id="easyalluvial" class="section level2">
@@ -121,9 +125,11 @@
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="no">tidyverse</span>) )
-<span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="no">easyalluvial</span>) )
-<span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="no">parcats</span>) )</pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="kw"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span>) )
+<span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="kw"><a href="https://github.com/erblast/easyalluvial">easyalluvial</a></span>) )
+<span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressPackageStartupMessages</a></span>( <span class="fu"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="kw"><a href="https://erblast.github.io/parcats">parcats</a></span>) )
+</pre></div>
 <div id="live-widget" class="section level3">
 <h3 class="hasAnchor">
 <a href="#live-widget" class="anchor"></a>Live Widget</h3>
@@ -132,9 +138,11 @@
 <div id="parcats-from-alluvial-from-data-in-wide-format" class="section level3">
 <h3 class="hasAnchor">
 <a href="#parcats-from-alluvial-from-data-in-wide-format" class="anchor"></a>Parcats from alluvial from data in wide format</h3>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="no">p</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/easyalluvial/man/alluvial_wide.html">alluvial_wide</a></span>(<span class="no">mtcars2</span>, <span class="kw">max_variables</span> <span class="kw">=</span> <span class="fl">5</span>)
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="kw">p</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/easyalluvial/man/alluvial_wide.html">alluvial_wide</a></span>(<span class="kw">mtcars2</span>, max_variables = <span class="fl">5</span>)
 
-<span class="fu"><a href="https://erblast.github.io/parcats//reference/parcats.html">parcats</a></span>(<span class="no">p</span>, <span class="kw">marginal_histograms</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">data_input</span> <span class="kw">=</span> <span class="no">mtcars2</span>)</pre></div>
+<span class="fu"><a href="reference/parcats.html">parcats</a></span>(<span class="kw">p</span>, marginal_histograms = <span class="fl">TRUE</span>, data_input = <span class="kw">mtcars2</span>)
+</pre></div>
 <p><img src="https://raw.githubusercontent.com/erblast/parcats/master/man/figures/demo1.gif"></p>
 </div>
 <div id="parcats-from-model-response-alluvial" class="section level3">
@@ -145,14 +153,16 @@
 <li><a href="https://www.datisticsblog.com/2019/04/visualising-model-response-with-easyalluvial/">Visualise model response with alluvial plots</a></li>
 </ul>
 <p>Here we see the response of a random forest model if we vary the three variables with the highest importance while keeping all other features at their median/mode value.</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="no">df</span> <span class="kw">=</span> <span class="fu">select</span>(<span class="no">mtcars2</span>, -<span class="no">ids</span> )
-<span class="no">m</span> <span class="kw">=</span> <span class="kw pkg">randomForest</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/randomForest/man/randomForest.html">randomForest</a></span>( <span class="no">disp</span> ~ <span class="no">.</span>, <span class="no">df</span>)
-<span class="no">imp</span> <span class="kw">=</span> <span class="no">m</span>$<span class="no">importance</span>
-<span class="no">dspace</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/easyalluvial/man/get_data_space.html">get_data_space</a></span>(<span class="no">df</span>, <span class="no">imp</span>, <span class="kw">degree</span> <span class="kw">=</span> <span class="fl">3</span>)
-<span class="no">pred</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(<span class="no">m</span>, <span class="kw">newdata</span> <span class="kw">=</span> <span class="no">dspace</span>)
-<span class="no">p</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/pkg/easyalluvial/man/alluvial_model_response.html">alluvial_model_response</a></span>(<span class="no">pred</span>, <span class="no">dspace</span>, <span class="no">imp</span>, <span class="kw">degree</span> <span class="kw">=</span> <span class="fl">3</span>)
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="kw">df</span> <span class="op">=</span> <span class="fu">select</span>(<span class="kw">mtcars2</span>, <span class="op">-</span><span class="kw">ids</span> )
+<span class="kw">m</span> <span class="op">=</span> <span class="kw">randomForest</span>::<span class="fu"><a href="https://rdrr.io/pkg/randomForest/man/randomForest.html">randomForest</a></span>( <span class="kw">disp</span> <span class="op">~</span> <span class="kw">.</span>, <span class="kw">df</span>)
+<span class="kw">imp</span> <span class="op">=</span> <span class="kw">m</span><span class="op">$</span><span class="kw">importance</span>
+<span class="kw">dspace</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/easyalluvial/man/get_data_space.html">get_data_space</a></span>(<span class="kw">df</span>, <span class="kw">imp</span>, degree = <span class="fl">3</span>)
+<span class="kw">pred</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html">predict</a></span>(<span class="kw">m</span>, newdata = <span class="kw">dspace</span>)
+<span class="kw">p</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/easyalluvial/man/alluvial_model_response.html">alluvial_model_response</a></span>(<span class="kw">pred</span>, <span class="kw">dspace</span>, <span class="kw">imp</span>, degree = <span class="fl">3</span>)
 
-<span class="fu"><a href="https://erblast.github.io/parcats//reference/parcats.html">parcats</a></span>(<span class="no">p</span>, <span class="kw">marginal_histograms</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">imp</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">data_input</span> <span class="kw">=</span> <span class="no">df</span>)</pre></div>
+<span class="fu"><a href="reference/parcats.html">parcats</a></span>(<span class="kw">p</span>, marginal_histograms = <span class="fl">TRUE</span>, imp = <span class="fl">TRUE</span>, data_input = <span class="kw">df</span>)
+</pre></div>
 <p><img src="https://raw.githubusercontent.com/erblast/parcats/master/man/figures/demo2.gif"></p>
 </div>
 </div>
@@ -202,7 +212,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
 </div>
 
       </footer>
