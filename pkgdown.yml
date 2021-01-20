@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   parcats: parcats.html
-last_built: 2021-01-12T23:22Z
+last_built: 2021-01-19T23:59Z
 urls:
   reference: https://erblast.github.io/parcats//reference
   article: https://erblast.github.io/parcats//articles
