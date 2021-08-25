@@ -91,7 +91,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">parcats</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.2.900</span>
       </span>
     </div>
 
@@ -138,24 +138,24 @@
  plot using the 'plotly.js' library</p>
     </div>
 
-    <pre class="usage"><span class='fu'>parcats</span>(
-  <span class='kw'>p</span>,
-  marginal_histograms = <span class='fl'>TRUE</span>,
-  data_input = <span class='kw'>NULL</span>,
-  imp = <span class='fl'>TRUE</span>,
-  width = <span class='kw'>NULL</span>,
-  height = <span class='kw'>NULL</span>,
-  elementId = <span class='kw'>NULL</span>,
-  hoveron = <span class='st'>"color"</span>,
-  hoverinfo = <span class='st'>"count+probability"</span>,
-  arrangement = <span class='st'>"perpendicular"</span>,
-  bundlecolors = <span class='fl'>TRUE</span>,
-  sortpaths = <span class='st'>"forward"</span>,
-  labelfont = <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(size = <span class='fl'>24</span>, color = <span class='st'>"black"</span>),
-  tickfont = <span class='kw'>NULL</span>,
-  offset_marginal_histograms = <span class='fl'>0.8</span>,
-  offset_imp = <span class='fl'>0.9</span>
-)</pre>
+    <pre class="usage"><span class='fu'>parcats</span><span class='op'>(</span>
+  <span class='va'>p</span>,
+  marginal_histograms <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  data_input <span class='op'>=</span> <span class='cn'>NULL</span>,
+  imp <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  width <span class='op'>=</span> <span class='cn'>NULL</span>,
+  height <span class='op'>=</span> <span class='cn'>NULL</span>,
+  elementId <span class='op'>=</span> <span class='cn'>NULL</span>,
+  hoveron <span class='op'>=</span> <span class='st'>"color"</span>,
+  hoverinfo <span class='op'>=</span> <span class='st'>"count+probability"</span>,
+  arrangement <span class='op'>=</span> <span class='st'>"perpendicular"</span>,
+  bundlecolors <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  sortpaths <span class='op'>=</span> <span class='st'>"forward"</span>,
+  labelfont <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>24</span>, color <span class='op'>=</span> <span class='st'>"black"</span><span class='op'>)</span>,
+  tickfont <span class='op'>=</span> <span class='cn'>NULL</span>,
+  offset_marginal_histograms <span class='op'>=</span> <span class='fl'>0.7</span>,
+  offset_imp <span class='op'>=</span> <span class='fl'>0.9</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -261,26 +261,26 @@ diagram, Default: 0.8</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://github.com/erblast/easyalluvial'>easyalluvial</a></span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/erblast/easyalluvial/'>easyalluvial</a></span><span class='op'>)</span>
 
 <span class='co'># alluvial wide ---------------------------------</span>
-<span class='kw'>p</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/easyalluvial/man/alluvial_wide.html'>alluvial_wide</a></span>(<span class='kw'>mtcars2</span>, max_variables = <span class='fl'>5</span>)
+<span class='va'>p</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/easyalluvial/man/alluvial_wide.html'>alluvial_wide</a></span><span class='op'>(</span><span class='va'>mtcars2</span>, max_variables <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
 
-<span class='fu'>parcats</span>(<span class='kw'>p</span>, marginal_histograms = <span class='fl'>FALSE</span>)
+<span class='fu'>parcats</span><span class='op'>(</span><span class='va'>p</span>, marginal_histograms <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
 
-<span class='fu'>parcats</span>(<span class='kw'>p</span>, marginal_histograms = <span class='fl'>TRUE</span>, data_input = <span class='kw'>mtcars2</span>)
+<span class='fu'>parcats</span><span class='op'>(</span><span class='va'>p</span>, marginal_histograms <span class='op'>=</span> <span class='cn'>TRUE</span>, data_input <span class='op'>=</span> <span class='va'>mtcars2</span><span class='op'>)</span>
 
-<span class='co'># \dontrun{</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='co'># alluvial for model response --------------------</span>
-<span class='kw'>df</span> <span class='op'>=</span> <span class='kw'>mtcars2</span>[, <span class='op'>!</span> <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>mtcars2</span>) <span class='op'>%in%</span> <span class='st'>'ids'</span> ]
-<span class='kw'>m</span> <span class='op'>=</span> <span class='kw'>randomForest</span>::<span class='fu'><a href='https://rdrr.io/pkg/randomForest/man/randomForest.html'>randomForest</a></span>( <span class='kw'>disp</span> <span class='op'>~</span> <span class='kw'>.</span>, <span class='kw'>df</span>)
-<span class='kw'>imp</span> <span class='op'>=</span> <span class='kw'>m</span><span class='op'>$</span><span class='kw'>importance</span>
-<span class='kw'>dspace</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/easyalluvial/man/get_data_space.html'>get_data_space</a></span>(<span class='kw'>df</span>, <span class='kw'>imp</span>, degree = <span class='fl'>3</span>)
-<span class='kw'>pred</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='kw'>m</span>, newdata = <span class='kw'>dspace</span>)
-<span class='kw'>p</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/easyalluvial/man/alluvial_model_response.html'>alluvial_model_response</a></span>(<span class='kw'>pred</span>, <span class='kw'>dspace</span>, <span class='kw'>imp</span>, degree = <span class='fl'>3</span>)
+<span class='va'>df</span> <span class='op'>=</span> <span class='va'>mtcars2</span><span class='op'>[</span>, <span class='op'>!</span> <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>mtcars2</span><span class='op'>)</span> <span class='op'>%in%</span> <span class='st'>'ids'</span> <span class='op'>]</span>
+<span class='va'>m</span> <span class='op'>=</span> <span class='fu'>randomForest</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/randomForest/man/randomForest.html'>randomForest</a></span><span class='op'>(</span> <span class='va'>disp</span> <span class='op'>~</span> <span class='va'>.</span>, <span class='va'>df</span><span class='op'>)</span>
+<span class='va'>imp</span> <span class='op'>=</span> <span class='va'>m</span><span class='op'>$</span><span class='va'>importance</span>
+<span class='va'>dspace</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/easyalluvial/man/get_data_space.html'>get_data_space</a></span><span class='op'>(</span><span class='va'>df</span>, <span class='va'>imp</span>, degree <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
+<span class='va'>pred</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m</span>, newdata <span class='op'>=</span> <span class='va'>dspace</span><span class='op'>)</span>
+<span class='va'>p</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/easyalluvial/man/alluvial_model_response.html'>alluvial_model_response</a></span><span class='op'>(</span><span class='va'>pred</span>, <span class='va'>dspace</span>, <span class='va'>imp</span>, degree <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
 
-<span class='fu'>parcats</span>(<span class='kw'>p</span>, marginal_histograms = <span class='fl'>TRUE</span>, imp = <span class='fl'>TRUE</span>, data_input = <span class='kw'>df</span>)
-<span class='co'># }</span>
+<span class='fu'>parcats</span><span class='op'>(</span><span class='va'>p</span>, marginal_histograms <span class='op'>=</span> <span class='cn'>TRUE</span>, imp <span class='op'>=</span> <span class='cn'>TRUE</span>, data_input <span class='op'>=</span> <span class='va'>df</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 </div></pre>
   </div>
