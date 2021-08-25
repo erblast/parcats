@@ -19,7 +19,7 @@ parcats(
   sortpaths = "forward",
   labelfont = list(size = 24, color = "black"),
   tickfont = NULL,
-  offset_marginal_histograms = 0.8,
+  offset_marginal_histograms = 0.7,
   offset_imp = 0.9
 )
 }

@@ -1,6 +1,6 @@
 Package: parcats
 Title: Interactive Parallel Categories Diagrams for 'easyalluvial'
-Version: 0.0.2
+Version: 0.0.2.900
 Authors@R: person( "Bjoern", "Koneswarakantha", role = c("aut","cre"), email = "datistics@gmail.com", comment = c(ORCID = "0000-0003-4585-7799") )
 URL: https://erblast.github.io/parcats/
 Description: Complex graphical representations of data are best explored using interactive elements.
@@ -20,15 +20,16 @@ Suggests:
     knitr,
     rmarkdown,
     spelling
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Imports:
-  easyalluvial (>= 0.2.1.0)
-  , tidyr (>= 1.0.0)
-  , dplyr
-  , purrr
-  , forcats
-  , magrittr
-  , tibble
-  , htmlwidgets
-  , stringr
+  easyalluvial (>= 0.2.1.0),
+  tidyr (>= 1.0.0),
+  dplyr,
+  purrr,
+  forcats,
+  magrittr,
+  tibble,
+  htmlwidgets,
+  stringr,
+  shiny
 Language: en-US

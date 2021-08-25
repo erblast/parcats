@@ -44,7 +44,7 @@ HTMLWidgets.widget({
     
     layout['shapes'] = shapes;
 
-    Plotly.plot(el.id, data, layout, {responsive: true});
+    Plotly.newPlot(el.id, data, layout, {responsive: true});
     
     myPlot.on('plotly_hover', function(data){
       

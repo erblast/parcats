@@ -353,6 +353,10 @@ trace_parcats = function(p
     spread(x, value) %>%
     arrange(alluvial_id)
   
+  if (p$alluvial_params$fill_by == "values") {
+    stop("fill_by = 'values' not supported in parcats")
+  }
+  
   if( nrow(df) != ( df$alluvial_id %>% as.numeric %>% max() ) ){
     stop('data assumption violated')
   }
@@ -626,7 +630,7 @@ parcats <- function(p, marginal_histograms = TRUE, data_input = NULL
                      , sortpaths = 'forward'
                      , labelfont = list( size = 24, color = 'black' )
                      , tickfont = NULL
-                     , offset_marginal_histograms = 0.8
+                     , offset_marginal_histograms = 0.7
                      , offset_imp = 0.9
                      ) {
 
@@ -642,7 +646,7 @@ parcats <- function(p, marginal_histograms = TRUE, data_input = NULL
   }
   
   if(marginal_histograms){
-    domain = list(y = c(0, 0.7))
+    domain = list(y = c(0, offset_marginal_histograms))
   }else{
     domain = list( y = c(0, 1) )
   }
@@ -788,4 +792,17 @@ parcatsOutput <- function(outputId, width = '100%', height = '100%', inline = FA
 render_parcats <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
   htmlwidgets::shinyRenderWidget(expr, parcatsOutput, env, quoted = TRUE)
+}
+
+#' @title run parcats shiny demo
+#' @examples 
+#' \dontrun{
+#' parcats_demo()
+#' }
+#' @rdname parcats_demo
+#' @importFrom shiny runApp
+#' @export 
+parcats_demo <- function() {
+  system.file("shiny/parcats", package = "parcats") %>%
+    shiny::runApp()
 }
