@@ -30,5 +30,6 @@ reference:
   desc: ~
   contents:
   - '`parcats`'
+  - '`parcats_demo`'
   - '`parcats-shiny`'
 

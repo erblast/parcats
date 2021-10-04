@@ -19,7 +19,6 @@ knitr::opts_chunk$set(
 # parcats <a href='https://erblast.github.io/parcats'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
-  [![Travis build status](https://travis-ci.org/erblast/parcats.svg?branch=master)](https://travis-ci.org/erblast/parcats)
   [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branch=master&svg=true)](https://ci.appveyor.com/project/erblast/parcats)
   [![Codecov test coverage](https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg)](https://codecov.io/gh/erblast/parcats?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/parcats)](https://CRAN.R-project.org/package=parcats)
@@ -67,11 +66,19 @@ devtools::install_github("erblast/parcats")
 ## Examples
 
 ```{r}
-suppressPackageStartupMessages( require(tidyverse) )
-suppressPackageStartupMessages( require(easyalluvial) )
-suppressPackageStartupMessages( require(parcats) )
-
+suppressPackageStartupMessages(require(tidyverse))
+suppressPackageStartupMessages(require(easyalluvial))
+suppressPackageStartupMessages(require(parcats))
 ```
+
+### Shiny Demo
+
+The shiny demo allows you to interactively explor the parameters of `alluvial_wide()` and `parcats()`
+
+```{r eval = FALSE}
+parcats_demo()
+```
+
 
 ### Live Widget
 

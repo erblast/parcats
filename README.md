@@ -5,8 +5,6 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.org/erblast/parcats.svg?branch=master)](https://travis-ci.org/erblast/parcats)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branch=master&svg=true)](https://ci.appveyor.com/project/erblast/parcats)
 [![Codecov test
@@ -18,6 +16,8 @@ status](https://www.r-pkg.org/badges/version/parcats)](https://CRAN.R-project.or
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/parcats)](https://cran.r-project.org/package=parcats)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/parcats)](https://cran.r-project.org/package=parcats)
+[![R build
+status](https://github.com/erblast/parcats/workflows/R-CMD-check/badge.svg)](https://github.com/erblast/parcats/actions)
 <!-- badges: end -->
 
 ###### Create ‘plotly.js’ Parallel Categories Diagrams Using this Htmlwidget and ‘easyalluvial’
@@ -28,8 +28,8 @@ to the ‘easyalluvial’ package. The ‘plotly.js’ parallel categories
 diagrams offer a good framework for creating interactive flow graphs
 that allow manual drag and drop sorting of dimensions and categories,
 highlighting single flows and displaying mouse over information. The
-‘plotly.js’ dependency is quite heavy and therefore is outsourced into
-a separate package.
+‘plotly.js’ dependency is quite heavy and therefore is outsourced into a
+separate package.
 
 ## Installation
 
@@ -42,7 +42,6 @@ install.packages('parcats')
 ### Development Version
 
 ``` r
-
 # install.packages("devtools")
 devtools::install_github("erblast/parcats")
 ```
@@ -52,17 +51,26 @@ devtools::install_github("erblast/parcats")
 `parcats` requires an alluvial plot created with `easyalluvial` to
 create an interactive parrallel categories diagram.
 
-  - [easyalluvial
+-   [easyalluvial
     documentation](https://erblast.github.io/easyalluvial/)
 
-  - [easyalluvial github page](https://github.com/erblast/easyalluvial)
+-   [easyalluvial github page](https://github.com/erblast/easyalluvial)
 
 ## Examples
 
 ``` r
-suppressPackageStartupMessages( require(tidyverse) )
-suppressPackageStartupMessages( require(easyalluvial) )
-suppressPackageStartupMessages( require(parcats) )
+suppressPackageStartupMessages(require(tidyverse))
+suppressPackageStartupMessages(require(easyalluvial))
+suppressPackageStartupMessages(require(parcats))
+```
+
+### Shiny Demo
+
+The shiny demo allows you to interactively explor the parameters of
+`alluvial_wide()` and `parcats()`
+
+``` r
+parcats_demo()
 ```
 
 ### Live Widget
@@ -89,7 +97,7 @@ plots attempt to visualise ML models in a two dimensional space. Using
 alluvial plots or parrallel categories diagrams we can increase the
 number of dimensions.
 
-  - [Visualise model response with alluvial
+-   [Visualise model response with alluvial
     plots](https://www.datisticsblog.com/2019/04/visualising-model-response-with-easyalluvial/)
 
 Here we see the response of a random forest model if we vary the three
