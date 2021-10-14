@@ -3,6 +3,7 @@ Title: Interactive Parallel Categories Diagrams for 'easyalluvial'
 Version: 0.0.3
 Authors@R: person( "Bjoern", "Koneswarakantha", role = c("aut","cre"), email = "datistics@gmail.com", comment = c(ORCID = "0000-0003-4585-7799") )
 URL: https://erblast.github.io/parcats/
+BugReports: https://github.com/erblast/parcats/issues/
 Description: Complex graphical representations of data are best explored using interactive elements.
   'parcats' adds interactive graphing capabilities to the 'easyalluvial' package.
   The 'plotly.js' parallel categories diagrams offer a good framework for
@@ -11,8 +12,7 @@ Description: Complex graphical representations of data are best explored using i
   'plotly.js' dependency is quite heavy and therefore is outsourced into a separate package.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
-Depends: R(>= 2.10)
+Depends: R (>= 3.0.0)
 Suggests: 
     testthat,
     covr,
@@ -20,8 +20,9 @@ Suggests:
     knitr,
     rmarkdown,
     spelling,
-    plotly
-RoxygenNote: 7.1.1
+    plotly,
+    shiny
+RoxygenNote: 7.1.2
 Imports:
   easyalluvial (>= 0.2.1.0),
   tidyr (>= 1.0.0),
@@ -31,6 +32,5 @@ Imports:
   magrittr,
   tibble,
   htmlwidgets,
-  stringr,
-  shiny
+  stringr
 Language: en-US

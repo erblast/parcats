@@ -794,15 +794,19 @@ render_parcats <- function(expr, env = parent.frame(), quoted = FALSE) {
   htmlwidgets::shinyRenderWidget(expr, parcatsOutput, env, quoted = TRUE)
 }
 
+
+
 #' @title run parcats shiny demo
 #' @examples 
 #' \dontrun{
 #' parcats_demo()
 #' }
 #' @rdname parcats_demo
-#' @importFrom shiny runApp
 #' @export 
 parcats_demo <- function() {
+  
+  easyalluvial::check_pkg_installed("shiny")
+  
   system.file("shiny/parcats", package = "parcats") %>%
     shiny::runApp()
 }
