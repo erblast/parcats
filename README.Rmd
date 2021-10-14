@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branch=master&svg=true)](https://ci.appveyor.com/project/erblast/parcats)
-[![Codecov test coverage](https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg)](https://codecov.io/gh/erblast/parcats?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg)](https://app.codecov.io/gh/erblast/parcats?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/parcats)](https://CRAN.R-project.org/package=parcats)
 [![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/parcats)](https://cran.r-project.org/package=parcats)
 [![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/parcats)](https://cran.r-project.org/package=parcats)
@@ -87,7 +87,7 @@ The Htmlwidgets cannot be embedded in the `README.md` file. Check out the [Live 
 ### Parcats from alluvial from data in wide format
 
 ```{r eval = FALSE}
-p = alluvial_wide(mtcars2, max_variables = 5)
+p <- alluvial_wide(mtcars2, max_variables = 5)
 
 parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 
@@ -105,12 +105,12 @@ Here we see the response of a random forest model if we vary the three variables
 
 
 ```{r eval = FALSE}
-df = select(mtcars2, -ids )
-m = randomForest::randomForest( disp ~ ., df)
-imp = m$importance
-dspace = get_data_space(df, imp, degree = 3)
-pred = predict(m, newdata = dspace)
-p = alluvial_model_response(pred, dspace, imp, degree = 3)
+df <- select(mtcars2, -ids )
+m <- randomForest::randomForest( disp ~ ., df)
+imp <- m$importance
+dspace <- get_data_space(df, imp, degree = 3)
+pred <- predict(m, newdata = dspace)
+p <- alluvial_model_response(pred, dspace, imp, degree = 3)
 
 parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 
