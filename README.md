@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# parcats <a href='https://erblast.github.io/parcats'><img src='man/figures/logo.png' align="right" height="139" /></a>
+# parcats <a href='https://erblast.github.io/parcats/'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
 
@@ -11,7 +11,7 @@ status](https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branc
 coverage](https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg)](https://codecov.io/gh/erblast/parcats?branch=master)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/parcats)](https://CRAN.R-project.org/package=parcats)
-[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/parcats)](https://cran.r-project.org/package=parcats)
+[![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/parcats)](https://cran.r-project.org/package=parcats)
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/parcats)](https://cran.r-project.org/package=parcats)
 [![metacran
@@ -66,7 +66,7 @@ suppressPackageStartupMessages(require(parcats))
 
 ### Shiny Demo
 
-The shiny demo allows you to interactively explor the parameters of
+The shiny demo allows you to interactively explore the parameters of
 `alluvial_wide()` and `parcats()`
 
 ``` r
