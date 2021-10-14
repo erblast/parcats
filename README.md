@@ -8,7 +8,7 @@
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branch=master&svg=true)](https://ci.appveyor.com/project/erblast/parcats)
 [![Codecov test
-coverage](https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg)](https://codecov.io/gh/erblast/parcats?branch=master)
+coverage](https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg)](https://app.codecov.io/gh/erblast/parcats?branch=master)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/parcats)](https://CRAN.R-project.org/package=parcats)
 [![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/parcats)](https://cran.r-project.org/package=parcats)
@@ -82,7 +82,7 @@ here](https://erblast.github.io/parcats/articles/parcats.html).
 ### Parcats from alluvial from data in wide format
 
 ``` r
-p = alluvial_wide(mtcars2, max_variables = 5)
+p <- alluvial_wide(mtcars2, max_variables = 5)
 
 parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 ```
@@ -105,12 +105,12 @@ variables with the highest importance while keeping all other features
 at their median/mode value.
 
 ``` r
-df = select(mtcars2, -ids )
-m = randomForest::randomForest( disp ~ ., df)
-imp = m$importance
-dspace = get_data_space(df, imp, degree = 3)
-pred = predict(m, newdata = dspace)
-p = alluvial_model_response(pred, dspace, imp, degree = 3)
+df <- select(mtcars2, -ids )
+m <- randomForest::randomForest( disp ~ ., df)
+imp <- m$importance
+dspace <- get_data_space(df, imp, degree = 3)
+pred <- predict(m, newdata = dspace)
+p <- alluvial_model_response(pred, dspace, imp, degree = 3)
 
 parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
 ```
