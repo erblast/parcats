@@ -12,6 +12,7 @@ github
 htmlwidget
 js
 js’
+magrittr
 metacran
 parcats’
 parrallel

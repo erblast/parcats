@@ -7,3 +7,4 @@ revdep/
 inst/doc
 docker.sh
 docs/
+.DS_Store

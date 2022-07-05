@@ -619,6 +619,7 @@ get_shapes = function(traces){
 #'@importFrom graphics text
 #'@importFrom stats density
 #'@importFrom utils data  
+#'@importFrom tibble tibble
 parcats <- function(p, marginal_histograms = TRUE, data_input = NULL
                      , imp = TRUE
                      , width = NULL, height = NULL, elementId = NULL
