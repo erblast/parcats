@@ -587,9 +587,9 @@ get_shapes = function(traces){
 #'
 #' parcats(p, marginal_histograms = FALSE)
 #'
+#'\dontrun{
 #' parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 #' 
-#'\dontrun{
 #' # alluvial for model response --------------------
 #' df = mtcars2[, ! names(mtcars2) %in% 'ids' ]
 #' m = randomForest::randomForest( disp ~ ., df)
