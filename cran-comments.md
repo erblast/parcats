@@ -1,3 +1,6 @@
+# resubmission 0.0.4 - 1
+* changed example to dont run because it takes > 10s to execute on some CRAN test servers
+
 # parcats 0.0.4
 clean up package dependencies
 

@@ -579,7 +579,8 @@ get_shapes = function(traces){
 #'@return htmlwidget
 #'@details most parameters are best left at default values
 #' @examples
-#'
+#' 
+#'\dontrun{
 #'library(easyalluvial)
 #'
 #' # alluvial wide ---------------------------------
@@ -587,7 +588,6 @@ get_shapes = function(traces){
 #'
 #' parcats(p, marginal_histograms = FALSE)
 #'
-#'\dontrun{
 #' parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 #' 
 #' # alluvial for model response --------------------
@@ -799,8 +799,8 @@ render_parcats <- function(expr, env = parent.frame(), quoted = FALSE) {
 
 #' @title run parcats shiny demo
 #' @examples 
-#' \dontrun{
-#' parcats_demo()
+#' if (interactive()) {
+#'   parcats_demo()
 #' }
 #' @rdname parcats_demo
 #' @export 

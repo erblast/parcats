@@ -19,3 +19,4 @@
 ^demo2\.png$
 ^\.github$
 ^DS_Store$
+^CRAN-SUBMISSION$
