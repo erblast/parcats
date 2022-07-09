@@ -10,7 +10,7 @@ parcats_demo()
 run parcats shiny demo
 }
 \examples{
-\dontrun{
-parcats_demo()
+if (interactive()) {
+  parcats_demo()
 }
 }

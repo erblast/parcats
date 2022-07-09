@@ -579,7 +579,8 @@ get_shapes = function(traces){
 #'@return htmlwidget
 #'@details most parameters are best left at default values
 #' @examples
-#'
+#' 
+#'\dontrun{
 #'library(easyalluvial)
 #'
 #' # alluvial wide ---------------------------------
@@ -589,7 +590,6 @@ get_shapes = function(traces){
 #'
 #' parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 #' 
-#'\dontrun{
 #' # alluvial for model response --------------------
 #' df = mtcars2[, ! names(mtcars2) %in% 'ids' ]
 #' m = randomForest::randomForest( disp ~ ., df)
@@ -619,6 +619,7 @@ get_shapes = function(traces){
 #'@importFrom graphics text
 #'@importFrom stats density
 #'@importFrom utils data  
+#'@importFrom tibble tibble
 parcats <- function(p, marginal_histograms = TRUE, data_input = NULL
                      , imp = TRUE
                      , width = NULL, height = NULL, elementId = NULL
@@ -798,8 +799,8 @@ render_parcats <- function(expr, env = parent.frame(), quoted = FALSE) {
 
 #' @title run parcats shiny demo
 #' @examples 
-#' \dontrun{
-#' parcats_demo()
+#' if (interactive()) {
+#'   parcats_demo()
 #' }
 #' @rdname parcats_demo
 #' @export 
