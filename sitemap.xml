@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://erblast.github.io/parcats//index.html</loc>
+    <loc>https://erblast.github.io/parcats/404.html</loc>
   </url>
   <url>
-    <loc>https://erblast.github.io/parcats//reference/parcats-shiny.html</loc>
+    <loc>https://erblast.github.io/parcats/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://erblast.github.io/parcats//reference/parcats.html</loc>
+    <loc>https://erblast.github.io/parcats/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://erblast.github.io/parcats//reference/parcats_demo.html</loc>
+    <loc>https://erblast.github.io/parcats/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://erblast.github.io/parcats//articles/parcats.html</loc>
+    <loc>https://erblast.github.io/parcats/articles/parcats.html</loc>
+  </url>
+  <url>
+    <loc>https://erblast.github.io/parcats/authors.html</loc>
+  </url>
+  <url>
+    <loc>https://erblast.github.io/parcats/index.html</loc>
+  </url>
+  <url>
+    <loc>https://erblast.github.io/parcats/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://erblast.github.io/parcats/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>https://erblast.github.io/parcats/reference/parcats-shiny.html</loc>
+  </url>
+  <url>
+    <loc>https://erblast.github.io/parcats/reference/parcats.html</loc>
+  </url>
+  <url>
+    <loc>https://erblast.github.io/parcats/reference/parcats_demo.html</loc>
+  </url>
+  <url>
+    <loc>https://erblast.github.io/parcats/reference/pipe.html</loc>
   </url>
 </urlset>
