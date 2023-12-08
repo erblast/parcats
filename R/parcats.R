@@ -580,7 +580,7 @@ get_shapes = function(traces){
 #'@details most parameters are best left at default values
 #' @examples
 #' 
-#'\dontrun{
+#'\donttest{
 #'library(easyalluvial)
 #'
 #' # alluvial wide ---------------------------------
@@ -590,15 +590,17 @@ get_shapes = function(traces){
 #'
 #' parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 #' 
-#' # alluvial for model response --------------------
-#' df = mtcars2[, ! names(mtcars2) %in% 'ids' ]
-#' m = randomForest::randomForest( disp ~ ., df)
-#' imp = m$importance
-#' dspace = get_data_space(df, imp, degree = 3)
-#' pred = predict(m, newdata = dspace)
-#' p = alluvial_model_response(pred, dspace, imp, degree = 3)
+#' if(check_pkg_installed("randomForest", raise_error = FALSE)) {
+#'   # alluvial for model response --------------------
+#'   df = mtcars2[, ! names(mtcars2) %in% 'ids' ]
+#'   m = randomForest::randomForest( disp ~ ., df)
+#'   imp = m$importance
+#'   dspace = get_data_space(df, imp, degree = 3)
+#'   pred = predict(m, newdata = dspace)
+#'   p = alluvial_model_response(pred, dspace, imp, degree = 3)
 #'
-#' parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
+#'   parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
+#' }
 #'}
 #'
 #'@seealso \code{\link[easyalluvial]{alluvial_wide}}
@@ -776,7 +778,7 @@ parcats <- function(p, marginal_histograms = TRUE, data_input = NULL
 #'   is useful if you want to save an expression in a variable.
 #'
 #' @name parcats-shiny
-#'
+#' @return No return value, called for side effects
 #' @export
 parcatsOutput <- function(outputId, width = '100%', height = '100%', inline = FALSE){
   htmlwidgets::shinyWidgetOutput(outputId
@@ -804,6 +806,7 @@ render_parcats <- function(expr, env = parent.frame(), quoted = FALSE) {
 #' }
 #' @rdname parcats_demo
 #' @export 
+#' @return No return value, called for side effects
 parcats_demo <- function() {
   
   easyalluvial::check_pkg_installed("shiny")

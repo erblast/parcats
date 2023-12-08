@@ -88,7 +88,7 @@ most parameters are best left at default values
 }
 \examples{
 
-\dontrun{
+\donttest{
 library(easyalluvial)
 
 # alluvial wide ---------------------------------
@@ -98,15 +98,17 @@ parcats(p, marginal_histograms = FALSE)
 
 parcats(p, marginal_histograms = TRUE, data_input = mtcars2)
 
-# alluvial for model response --------------------
-df = mtcars2[, ! names(mtcars2) \%in\% 'ids' ]
-m = randomForest::randomForest( disp ~ ., df)
-imp = m$importance
-dspace = get_data_space(df, imp, degree = 3)
-pred = predict(m, newdata = dspace)
-p = alluvial_model_response(pred, dspace, imp, degree = 3)
+if(check_pkg_installed("randomForest", raise_error = FALSE)) {
+  # alluvial for model response --------------------
+  df = mtcars2[, ! names(mtcars2) \%in\% 'ids' ]
+  m = randomForest::randomForest( disp ~ ., df)
+  imp = m$importance
+  dspace = get_data_space(df, imp, degree = 3)
+  pred = predict(m, newdata = dspace)
+  p = alluvial_model_response(pred, dspace, imp, degree = 3)
 
-parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
+  parcats(p, marginal_histograms = TRUE, imp = TRUE, data_input = df)
+}
 }
 
 }

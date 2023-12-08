@@ -6,6 +6,9 @@
 \usage{
 parcats_demo()
 }
+\value{
+No return value, called for side effects
+}
 \description{
 run parcats shiny demo
 }
