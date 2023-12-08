@@ -19,7 +19,7 @@ editor_options:
 ## Examples
 
 ```{r}
-suppressPackageStartupMessages(require(tidyverse))
+suppressPackageStartupMessages(require(dplyr))
 suppressPackageStartupMessages(require(easyalluvial))
 suppressPackageStartupMessages(require(parcats))
 ```
