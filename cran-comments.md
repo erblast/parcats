@@ -9,7 +9,8 @@ no reverse dependencies
 ## Test Environments
 * local macOS M1 R 4.3.2
 * github actions macos-latest R 4.3.2
-* WinBuilder R 4.2.1
+* Rhub Windows Server 2022, R-devel, 64 bit
+* WinBuilder R 4.3.2
 * WinBuilder R devel
 
 ## Test Results
