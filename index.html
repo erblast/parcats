@@ -51,7 +51,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">parcats</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.4</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.5</span>
       </span>
     </div>
 
@@ -97,6 +97,7 @@
 <a class="anchor" aria-label="anchor" href="#parcats-"></a>
 </h1></div>
 <!-- badges: start -->
+
 <div class="section level6">
 <h6 id="create-plotlyjs-parallel-categories-diagrams-using-this-htmlwidget-and-easyalluvial">Create ‘plotly.js’ Parallel Categories Diagrams Using this Htmlwidget and ‘easyalluvial’<a class="anchor" aria-label="anchor" href="#create-plotlyjs-parallel-categories-diagrams-using-this-htmlwidget-and-easyalluvial"></a>
 </h6>
@@ -115,8 +116,9 @@
 <h3 id="development-version">Development Version<a class="anchor" aria-label="anchor" href="#development-version"></a>
 </h3>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"erblast/parcats"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span></span>
+<span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"erblast/parcats"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
@@ -160,10 +162,12 @@
 <h3 id="parcats-from-model-response-alluvial">Parcats from model response alluvial<a class="anchor" aria-label="anchor" href="#parcats-from-model-response-alluvial"></a>
 </h3>
 <p>Machine Learning models operate in a multidimensional space and their response is hard to visualise. Model response and partial dependency plots attempt to visualise ML models in a two dimensional space. Using alluvial plots or parrallel categories diagrams we can increase the number of dimensions.</p>
-<ul><li><a href="https://www.datisticsblog.com/2019/04/visualising-model-response-with-easyalluvial/" class="external-link">Visualise model response with alluvial plots</a></li></ul>
+<ul>
+<li><a href="https://www.datisticsblog.com/2019/04/visualising-model-response-with-easyalluvial/" class="external-link">Visualise model response with alluvial plots</a></li>
+</ul>
 <p>Here we see the response of a random forest model if we vary the three variables with the highest importance while keeping all other features at their median/mode value.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">mtcars2</span>, <span class="op">-</span><span class="va">ids</span> <span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">select</span><span class="op">(</span><span class="va">mtcars2</span>, <span class="op">-</span><span class="va">ids</span> <span class="op">)</span></span>
 <span><span class="va">m</span> <span class="op">&lt;-</span> <span class="fu">randomForest</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/randomForest/man/randomForest.html" class="external-link">randomForest</a></span><span class="op">(</span> <span class="va">disp</span> <span class="op">~</span> <span class="va">.</span>, <span class="va">df</span><span class="op">)</span></span>
 <span><span class="va">imp</span> <span class="op">&lt;-</span> <span class="va">m</span><span class="op">$</span><span class="va">importance</span></span>
 <span><span class="va">dspace</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/easyalluvial/man/get_data_space.html" class="external-link">get_data_space</a></span><span class="op">(</span><span class="va">df</span>, <span class="va">imp</span>, degree <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
@@ -213,7 +217,6 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://ci.appveyor.com/project/erblast/parcats" class="external-link"><img src="https://ci.appveyor.com/api/projects/status/github/erblast/parcats?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
 <li><a href="https://app.codecov.io/gh/erblast/parcats?branch=master" class="external-link"><img src="https://codecov.io/gh/erblast/parcats/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://CRAN.R-project.org/package=parcats" class="external-link"><img src="https://www.r-pkg.org/badges/version/parcats" alt="CRAN status"></a></li>
 <li><a href="https://cran.r-project.org/package=parcats" class="external-link"><img src="https://www.r-pkg.org/badges/ago/parcats" alt="CRAN_time_from_release"></a></li>
@@ -234,7 +237,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
