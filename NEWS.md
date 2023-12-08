@@ -1,3 +1,6 @@
+# parcats 0.0.5
+* resubmit to CRAN
+
 # parcats 0.0.4
 * updated package dependencies
 

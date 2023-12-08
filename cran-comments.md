@@ -1,8 +1,7 @@
-# resubmission 0.0.4 - 1
-* changed example to dont run because it takes > 10s to execute on some CRAN test servers
 
-# parcats 0.0.4
-clean up package dependencies
+# parcats 0.0.5
+Resubmit to CRAN after being archived.
+Dependency 'easyalluvial' on CRAN again
 
 ## revdepcheck results
 no reverse dependencies
