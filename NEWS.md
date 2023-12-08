@@ -1,5 +1,5 @@
 # parcats 0.0.5
-* resubmit to CRAN
+* update vignette
 
 # parcats 0.0.4
 * updated package dependencies

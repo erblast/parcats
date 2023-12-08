@@ -7,9 +7,8 @@ Dependency 'easyalluvial' on CRAN again
 no reverse dependencies
 
 ## Test Environments
-* local macOS M1 R 4.2.1
-* Appveyor x86_64-w64-mingw32/x64 (64-bit) R 4.2.1
-* github actions macos-latest R 4.2.1
+* local macOS M1 R 4.3.2
+* github actions macos-latest R 4.3.2
 * WinBuilder R 4.2.1
 * WinBuilder R devel
 

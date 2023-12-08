@@ -28,7 +28,7 @@ jobs:
           needs: check
       - name: Install dependencies
         run: |
-          install.packages(c("remotes", "devtools", "tidyverse", "pkgdown"))
+          install.packages(c("remotes", "devtools", "pkgdown"))
           remotes::install_deps(dependencies = TRUE)
           devtools::install()
         shell: Rscript {0}
