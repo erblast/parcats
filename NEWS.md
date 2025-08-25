@@ -1,3 +1,5 @@
+# parcats 0.1.0
+* adapt to easyalluvial v0.4.0 and ggplot2 v4.0.0
 # parcats 0.0.5
 * update vignette
 * fix documentation

@@ -13,7 +13,7 @@ if(getRversion() >= "2.15.1"){
 
 trace_hist_all = function(p, data_input){
   
-  vars = p$data$x %>% levels()
+  vars = manip_get_ggplot_data(p)$x %>% levels()
   
   traces = list()
   
@@ -24,7 +24,7 @@ trace_hist_all = function(p, data_input){
     if(! is_pred){
       is_num = is.numeric( data_input[[var]] )
     }else{
-      var_pred = names(data_input)[! names(data_input) %in% names(p$alluvial_params$dspace) ]
+      var_pred = names(data_input)[! names(data_input) %in% names(attr(p, "alluvial_params")$dspace) ]
       if(length(var_pred) > 1){
         stop( paste('\n"data_input" should only contain explanatory and response variables, so response variable can be inferred.
                   \nPotential response variables:', paste( var_pred, collapse = ', ')
@@ -46,7 +46,7 @@ trace_hist_all = function(p, data_input){
 }
 
 trace_rug_all = function(p, data_input){
-  vars = p$data$x %>% levels()
+  vars = manip_get_ggplot_data(p)$x %>% levels()
   
   traces = list()
   
@@ -62,7 +62,7 @@ trace_rug_all = function(p, data_input){
 
 trace_rug = function(p, data_input, var){
   
-  vars = p$data$x %>% levels
+  vars = manip_get_ggplot_data(p)$x %>% levels
   
   is_num = is.numeric(data_input[[var]])
   
@@ -100,7 +100,7 @@ trace_hist_mod = function(p, data_input, var){
   
   df = p_hist$data
   
-  vars = p$data$x %>% levels
+  vars = manip_get_ggplot_data(p)$x %>% levels
   
   values = data_input[[var]]
 
@@ -125,7 +125,7 @@ trace_hist_mod = function(p, data_input, var){
   trace_var = list(trace_var)
   names(trace_var) <- paste0( var, '_dens')
   
-  lines_at = p$alluvial_params$dspace[[var]] %>%
+  lines_at = attr(p, "alluvial_params")$dspace[[var]] %>%
     unique() %>%
     sort()
   
@@ -133,7 +133,7 @@ trace_hist_mod = function(p, data_input, var){
   # labels need to be consistent {var}_{fill_label} so that we 
   # can track the traces
   
-  fill_labels = p$data %>%
+  fill_labels = manip_get_ggplot_data(p) %>%
     filter( x == var) %>%
     select( value, fill_value) %>%
     distinct() %>%
@@ -172,7 +172,7 @@ trace_hist_num = function(p, data_input, var){
   
   df = p_hist$data
   
-  vars = p$data$x %>% levels
+  vars = manip_get_ggplot_data(p)$x %>% levels
   
   if(var == 'pred'){
     
@@ -180,7 +180,7 @@ trace_hist_num = function(p, data_input, var){
     # labels need to be consistent {var}_{fill_label} so that we 
     # can track the traces
     
-    fill_labels = p$data %>%
+    fill_labels = manip_get_ggplot_data(p) %>%
       filter( x == 'pred') %>%
       select(fill, value, fill_value) %>%
       mutate( rwn = as.numeric(fill) ) %>%
@@ -194,7 +194,7 @@ trace_hist_num = function(p, data_input, var){
       left_join( fill_labels, by = 'rwn')
   }
   
-  if( p$alluvial_type == 'model_response' & var != 'pred'){
+  if( attr(p, "alluvial_type") == 'model_response' & var != 'pred'){
     return( trace_hist_mod(p, data_input, var) )
   }
   
@@ -227,7 +227,7 @@ trace_hist_cat = function(p, data_input, var){
   
   p_hist = easyalluvial::plot_hist(var = var, p = p, data_input = data_input)
   
-  df_label = p$data %>%
+  df_label = manip_get_ggplot_data(p) %>%
     filter( x == var ) %>%
     mutate( value = fct_drop(value) ) %>%
     select( value ) %>%
@@ -260,7 +260,7 @@ trace_hist_cat = function(p, data_input, var){
   
   lvl = levels(df[[var]])
   
-  vars = p$data$x %>% levels
+  vars = manip_get_ggplot_data(p)$x %>% levels
   
   df = df %>%
     mutate( var_key = fct_relevel(var_key, lvl) ) %>%
@@ -287,7 +287,7 @@ trace_imp = function(p, data_input, truncate_at = 50, color = 'darkgrey'){
   
   p_imp = easyalluvial::plot_imp(p, data_input, truncate_at, color )
   
-  df = p_imp$data
+  df = manip_get_ggplot_data(p_imp)
   
   if( ! 'const_values' %in% names(df) ){
     df$const_values = NA
@@ -297,7 +297,7 @@ trace_imp = function(p, data_input, truncate_at = 50, color = 'darkgrey'){
     mutate_if( is.factor, as.character ) %>%
     arrange( perc ) %>%
     mutate( fill = ifelse(plotted == 'n', 'lightgrey', color)
-            , method = p$alluvial_params$method 
+            , method = attr(p, "alluvial_params")$method 
             , text = case_when( plotted == 'y' ~ 'alluvial'
                                 , method == 'pdp' ~ 'pdp'
                                 , TRUE ~ paste('fixed:', const_values) ) ) %>%
@@ -334,8 +334,8 @@ trace_parcats = function(p
                          , tickfont
                          ){
   
-  if(p$alluvial_type == 'model_response'){
-    df = p$data %>%
+  if(attr(p, "alluvial_type") == 'model_response'){
+    df = manip_get_ggplot_data(p) %>%
       arrange( desc(value) ) %>%
       mutate(value_str = as.character(value)
               , value_str = ifelse( x != 'pred', str_split(value_str, '\\\n'), value_str)
@@ -345,7 +345,7 @@ trace_parcats = function(p
               , value = value_str) %>%
       select( - value_str)
   }else{
-    df = p$data
+    df = manip_get_ggplot_data(p)
   }
   
   df = df %>%
@@ -353,7 +353,7 @@ trace_parcats = function(p
     spread(x, value) %>%
     arrange(alluvial_id)
   
-  if (p$alluvial_params$fill_by == "values") {
+  if (attr(p, "alluvial_params")$fill_by == "values") {
     stop("fill_by = 'values' not supported in parcats")
   }
   
@@ -482,7 +482,7 @@ create_layout_hist = function(trace_hist
 
 map_trace = function(p, trace_hist){
   
-  df = p$data %>%
+  df = manip_get_ggplot_data(p) %>%
     mutate( x_value = map2_chr(x, value, function(x,y) paste0(x,'_' ,y) )
             , trace_number = map(x_value, ~ which(names(trace_hist) == . ) )
             , trace_number = map_int(trace_number, ~ ifelse( is_empty(.), NA, .)  ) ) %>%
@@ -641,9 +641,9 @@ parcats <- function(p, marginal_histograms = TRUE, data_input = NULL
     stop('data_input required if marginal_histograms == TRUE')
   }
   
-  if( imp == TRUE & is.null(data_input) & p$alluvial_type == 'model_response' ){
+  if( imp == TRUE & is.null(data_input) & attr(p, "alluvial_type") == 'model_response' ){
     stop('data_input required if imp == TRUE')
-  }else if(p$alluvial_type != 'model_response' | ! imp ){
+  }else if(attr(p, "alluvial_type") != 'model_response' | ! imp ){
     imp = FALSE
     offset_imp = 1
   }
@@ -654,7 +654,7 @@ parcats <- function(p, marginal_histograms = TRUE, data_input = NULL
     domain = list( y = c(0, 1) )
   }
   
-  if( imp & p$alluvial_type == 'model_response' ){
+  if( imp & attr(p, "alluvial_type") == 'model_response' ){
     domain$x = c(0, offset_imp - 0.05 )
     traces_imp = trace_imp(p, data_input, truncate_at = 50, color = 'darkgrey')
   }else{
@@ -718,7 +718,7 @@ parcats <- function(p, marginal_histograms = TRUE, data_input = NULL
     
     p_imp = easyalluvial::plot_imp(p, data_input)
     
-    max_perc = p_imp$data$perc %>% max()
+    max_perc = manip_get_ggplot_data(p_imp)$perc %>% max()
     
     for( i in seq(1, length(traces_imp) ) ){
       l = list( xref = 'x99'
