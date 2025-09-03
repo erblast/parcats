@@ -1,4 +1,3 @@
-AppVeyor
 Codecov
 Htmlwidget
 Htmlwidgets
@@ -8,6 +7,7 @@ easyalluvial
 easyalluvial’
 elementid
 freeform
+ggplot
 github
 htmlwidget
 js
