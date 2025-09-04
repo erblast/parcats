@@ -2,6 +2,11 @@
 
 context('parcats')
 
+mtcars2 <- easyalluvial::mtcars2
+titanic <- easyalluvial::titanic
+quarterly_flights <- easyalluvial::quarterly_flights
+quarterly_sunspots <- easyalluvial::quarterly_sunspots
+
 test_that('parcats_alluvial_wide'
   ,{
     
